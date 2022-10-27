@@ -1,3 +1,179 @@
+:root {
+    --xiketic: #141115;
+    --tan: #D0E3C4;
+}
+
+
+
+@font-face {
+    font-family: floral;
+    src: url('fonts/FLORAL\ PERSONAL\ USE.otf');
+}
+
+@font-face {
+    font-family: palm;
+    src: url('fonts/Palm\ Beach.ttf');
+}
+
+@font-face {
+    font-family: eunoia;
+    src: url('fonts/eunoia\ FREE.ttf');
+}
+
 body {
-    background-color: wheat;
+    box-sizing: border-box;
+    margin: 0;
+    height: 100vh;
+    max-height: 100vh;
+
+    background-color: white;
+
+    position: relative;
+}
+
+body.no-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+body.no-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#content {
+    box-sizing: border-box;
+    padding: 8px;
+    transition: all 1s, top 0.5s;
+
+    overflow-y: scroll;
+
+    /* height: 100%; */
+    width: 100%;
+    background-color: white;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#content.styled {
+    padding: 0px;
+    background-color: var(--xiketic);
+    color: var(--tan);
+
+    font-family: eunoia, serif;
+}
+
+#content::-webkit-scrollbar {
+    display: none;
+}
+
+#content {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.section {
+    box-sizing: border-box;
+    transition: height 1s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+.styled>.section {
+
+    height: 100vh !important;
+    width: 100vw !important;
+}
+
+.item-box {
+    transition: width 1s;
+    display: flex;
+    justify-content: center;
+}
+
+.styled .item-box {
+    width: 100% !important;
+}
+
+#main-title h1 {
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    font-size: 2rem;
+    transition: all 1s;
+    background-color: var(--tan);
+
+    white-space: nowrap;
+}
+
+.styled #main-title h1 {
+    font-size: 8rem;
+    margin: 0;
+
+    font-family: floral, sans-serif;
+    font-weight: lighter;
+
+    position: relative;
+    z-index: 1;
+}
+
+#main-title h1::before {
+    content: attr(text-content);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    transform: translate(-50%, -50%);
+
+    background-color: rgba(255, 0, 0, 0);
+    color: transparent;
+
+    transition: background-color 1s;
+    transition-delay: 0.5s;
+}
+
+.styled #main-title h1::before {
+    background-color: rgb(255, 0, 0);
+}
+
+.styled #main-title h2 {
+    margin: 0;
+    font-size: 2rem;
+    white-space: nowrap;
+    transition: all 1s;
+}
+
+.flicker>pre {
+    display: inline-block;
+    font-family: serif;
+    transform-origin: left;
+    margin: 0;
+}
+
+.styled .flicker>pre {
+    transform: translate(0%, 0%);
+    display: inline-block;
+
+    font-family: floral, sans-serif;
+    transform: translateY(0%) scaleY(1);
+}
+
+.styled .flicker>pre.flickered {
+    animation: flicker 1.5s cubic-bezier(.35,.04,0,1.1);
+}
+
+@keyframes flicker {
+    0% {transform: scaleX(1)}
+    25% {transform: scaleX(-1)}
+    100% {transform: scaleX(1)}
 }
