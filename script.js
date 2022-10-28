@@ -7,26 +7,28 @@ const animateContent = () => {
     const body = document.querySelector('body');
 
     if (animated) {
-        content.classList.remove('styled');
-        animated = false;
-        
-        body.classList.remove('no-scroll');
-        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+        // content.classList.remove('styled');
+        // animated = false;
+
+        // body.classList.remove('no-scroll');
+        // window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
     } else {
         content.classList.add('styled');
         animated = true;
-        
+
         body.classList.add('no-scroll');
-        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     }
 }
+
+
 
 document.defaultView.addEventListener('click', animateContent);
 
 let scrollIndex = 0;
 
 // Initialize values and listeners.
-const init = (()  => {
+const init = (() => {
     // Add inline style to sections for smooth transitioning.
     const sections = Array.from(document.querySelectorAll('.section'));
     sections.forEach(section => {
@@ -42,7 +44,7 @@ const init = (()  => {
     const content = document.getElementById('content');
     const section = document.querySelector('.section');
     content.addEventListener('wheel', (e) => {
-        
+
         // If not animated, skip snap scrolling.
         if (!animated) return;
 
@@ -52,12 +54,12 @@ const init = (()  => {
             scrollIndex++;
             if (scrollIndex > sections.length - 1) scrollIndex = sections.length - 1;
 
-            content.style.top =`${scrollIndex * section.offsetHeight * -1}px` 
+            content.style.top = `${scrollIndex * section.offsetHeight * -1}px`
         } else {
             scrollIndex--;
             if (scrollIndex < 0) scrollIndex = 0;
 
-            content.style.top =`${scrollIndex * section.offsetHeight * -1}px` 
+            content.style.top = `${scrollIndex * section.offsetHeight * -1}px`
         }
     });
 
@@ -68,7 +70,7 @@ const init = (()  => {
         console.log(textArray);
         item.innerText = ' ';
         textArray.forEach((letter, index) => {
-            
+
             let space = false;
             if (letter === ' ') space = true;
 
@@ -104,4 +106,55 @@ const init = (()  => {
             target.style.pointerEvents = 'all';
         }, 1500);
     }
+
+    let constrain = 70;
+
+    function transforms(x, y, el) {
+        let box = el.getBoundingClientRect();
+        let calcX = -(y - box.y - (box.height / 2)) / constrain;
+        let calcY = (x - box.x - (box.width / 2)) / constrain;
+
+        return "perspective(100px) "
+            + "   rotateX(" + calcX + "deg) "
+            + "   rotateY(" + calcY + "deg) ";
+    };
+
+    function transformElement(el, xyEl) {
+        el.style.transform = transforms.apply(null, xyEl);
+    }
+
+    const containers = Array.from(document.querySelectorAll('.transform-wrapper'));
+    containers.forEach(container => {
+        let box = container.querySelector('.box');
+
+        container.onmousemove = function (e) {
+            if (!animated) return;
+
+            let xy = [e.clientX, e.clientY];
+            let position = xy.concat([box]);
+    
+            window.requestAnimationFrame(function () {
+                transformElement(box, position);
+            });
+
+            
+        };
+
+        container.onmouseleave = function (e) {
+            box.style.transform = 'matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1)';
+            console.log('mouse left');
+        }
+    });
+    
+    // Add animation delays to all carousel items.
+    const carousels = Array.from(document.querySelectorAll('.tech-carousel'));
+    carousels.forEach(carousel => {
+        const items = Array.from(carousel.querySelectorAll('.tech-item'));
+        items.forEach((item, index) => {
+            const aniAngle = 360 / items.length;
+            console.log(aniAngle * index);
+            item.setAttribute('start-angle', `${aniAngle * index}deg`);
+        });
+    });
 })();
+

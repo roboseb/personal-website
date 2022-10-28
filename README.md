@@ -14,6 +14,12 @@ October 26th, 2022
 
     Two full days, and then maybe a half day. Seems pretty reasonable.
 
+October 27th, 2022
+
+    Lost a game of Hearthstone in legend today because my phone is ass. Literally missed out on swinging with a minion with 32 attack cause my phone just said to me, "Not today!"
+
+
+
 --To-Do--
 
 -Properly style README / add live github and gifs/photos
@@ -21,3 +27,5 @@ October 26th, 2022
 -animated pips 
 -differnt background colors for different sections
 -more floral motif
+-credits page (Armandocanals.com for 3d transform)
+-folder clicking and emptying out animation (including for rolodex)
