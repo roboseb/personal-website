@@ -101,7 +101,7 @@ body.no-scroll {
 }
 
 #main-title {
-    display: none;
+    /* display: none; */
 }
 
 #main-title h1 {
@@ -329,44 +329,123 @@ body.no-scroll {
 
 .styled .selected-project-img {
     background-size: contain;
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
 
     position: relative;
     z-index: 1;
+
+    transform-style: preserve-3d;
+
+    transform-origin: right;
+    transform: rotateY(0deg);
+    position: relative;
+
+    transition: all 0s;
+
+    transition-delay: 0.3s;
+}
+
+.styled .selected-project-img.visible {
+    animation: new-img 0.6s cubic-bezier(.93,.17,.24,.91);
+}
+
+@keyframes new-img {
+    0% {transform-origin: right; transform: rotateY(0deg);}
+    50% {transform-origin: right; transform: rotateY(-95deg);}
+    51% {transform-origin: bottom; transform: rotateX(95deg);}
+    100% {transform-origin: bottom; transform: rotateY(0deg);}
 }
 
 .styled .tech-carousel {
     width: 100%;
     height: 12%;
-    perspective: 1000px;
-    perspective-origin: 50% 50%;
+    position: relative;
 }
 
 .styled .tech-item {
+    box-sizing: border-box;
     position: absolute;
     bottom: 0;
-    left: 50%;
-    
+    left: 0;
 
-    transform-style: preserve-3d;
-
-    color: black;
-    background-color: var(--tan);
-    transform: translate(-50%, -50%) translateZ(500px) ;
-    padding: 10px;
-
-    transition: all 0.3s;
-    animation: tech-carousel 5s infinite linear;
+    height: 75%;
+    color: black;   
 }
 
-@keyframes tech-carousel {
-    0% {transform: translate(-50%, -0%) rotateY(0deg) translateZ(200px); z-index: 1;}
-    25% {transform: translate(-50%, -0%) rotateY(90deg) translateZ(200px); z-index: 1;}
-    25% {transform: translate(-50%, -0%) rotateY(90deg) translateZ(200px); z-index: 0;}
-    50% {transform: translate(-50%, -0%) rotateY(180deg) translateZ(200px); z-index: 0;}
-    75% {transform: translate(-50%, -0%) rotateY(270deg) translateZ(200px); z-index: 0;}
-    100% {transform: translate(-50%, -0%) rotateY(360deg) translateZ(200px); z-index: 1;}
+.styled .tech-item>.icon {
+    height: 100%;
+    width: 100%;
+
+    background-color: var(--tan);
+
+    background-size: auto 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    clip-path: circle(37.1% at 50% 50%);
+    position: relative;
+}
+
+.styled .tech-item::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 0.5rem;
+    height: 0.25rem;
+    transform: translate(0%, -50%);
+    background-color: red;
+}
+
+.styled .tech-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    width: 0.5rem;
+    height: 0.25rem;
+    transform: translate(0%, -50%);
+    background-color: red;
+}
+
+.styled .tech-item:not(.first){
+    height: 100%;
+    left: initial;
+    right: 0;
+
+    transition: transform 0.5s cubic-bezier(.93,.17,.24,.91);
+    transform-origin: right;
+}
+
+.styled .tech-item:not(.first).flipped.tech1 {
+    transform: scaleX(-1);
+}
+
+.styled .tech-item:not(.first).flipped.tech2 {
+    transform: scaleX(-1);
+}
+
+.styled .tech-item.tech2 {
+    transform-origin: left;
+}
+
+.styled .tech-item:not(.first).flipped.tech3 {
+    transform: scaleX(-1);
+}
+
+
+
+.styled .tech-item:not(.first).tech1>.icon {
+    transform-origin: center;
+    transform: scaleX(-1);
+}
+
+.styled .tech-item:not(.first).tech3>.icon {
+    transform-origin: center;
+    transform: scaleX(-1);
 }
 
 .styled .project-img-btn-box {
@@ -377,18 +456,67 @@ body.no-scroll {
     row-gap: 20px;
 
     flex-grow: 1;
+    transition: all 0.2s;
+
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+}
+
+.styled .project-img-btn-box:hover {
+    grid-template-columns: 19rem 1fr;
+    grid-template-rows: 18rem 1fr;
 }
 
 .styled  .selected-project-live,
 .styled .selected-project-github {
-    background-color: red;
-
+    box-sizing: border-box;
+    background-color: rgba(255, 0, 0, 0);
+    border: 5px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
 
     position: relative;
-    
+    transition: all 0.3s cubic-bezier(.93,.17,.24,.91);
+}
+
+.styled .selected-project-github {
+    grid-column: span 2;
+    border-width: 0px 5px 5px 5px; 
+    background: rgb(255,0,0);
+    background: linear-gradient(45deg, 
+            rgba(255,0,0,1) 0%, 
+            rgba(255,0,0,1) 50%, 
+            rgba(20,17,21,0) 50%, 
+            rgba(20,17,21,0) 100%);
+
+    background-size: 400%;
+    background-position: 100% 0%;
+
+}
+
+.styled .selected-project-github:hover {
+    background-position: 0% 100%;
+    color: black;
+}
+
+
+.styled .selected-project-live {
+    border-width: 5px 5px 0px 0px; 
+    background: rgb(255,0,0);
+    background: linear-gradient(236deg, 
+            rgba(255,0,0,1) 0%, 
+            rgba(255,0,0,1) 50%, 
+            rgba(20,17,21,0) 50%, 
+            rgba(20,17,21,0) 100%);
+
+    background-size: 400%;
+    background-position: 0% 100%;
+}
+
+.styled .selected-project-live:hover {
+    background-position: 100% 0%;
+    color: black;
 }
 
 .styled  .selected-project-live>a,
@@ -404,8 +532,3 @@ body.no-scroll {
     width: 100%;
 } 
 
-.styled .selected-project-github {
-    grid-column: span 2;
-
-    background-color: red;
-}

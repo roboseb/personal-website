@@ -18,7 +18,9 @@ October 27th, 2022
 
     Lost a game of Hearthstone in legend today because my phone is ass. Literally missed out on swinging with a minion with 32 attack cause my phone just said to me, "Not today!"
 
+October 28th, 2022
 
+    So technically one day left. I don't think I'll have this done to a satisfactory level within that timeframe, so I'll just add it to the other projects I need clean up early next month. 
 
 --To-Do--
 
@@ -27,5 +29,18 @@ October 27th, 2022
 -animated pips 
 -differnt background colors for different sections
 -more floral motif
+
 -credits page (Armandocanals.com for 3d transform)
+-mongodb icon by Icon 54 on iconscout
+-node icon icon 54 on iconscout
+-socket icon by socket mafia on iconscout
+-pug icon stolen from pug repo and cleaned by me
+
 -folder clicking and emptying out animation (including for rolodex)
+-fix project 3d folders not snapping back
+-folders that actually open?
+-retrigger animations on scroll in
+-replace images with gifs in the end
+-fix tech item red bar rounding error
+-add reminder text to tech logos
+-flower cutouts on slidey buttons
