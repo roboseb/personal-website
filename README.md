@@ -22,6 +22,14 @@ October 28th, 2022
 
     So technically one day left. I don't think I'll have this done to a satisfactory level within that timeframe, so I'll just add it to the other projects I need clean up early next month. 
 
+November 2nd, 2022
+
+    Short holiday over. Now to finish up the personal website so that I can start applying to jobs. Found an online svg editor that I think I can use to make my icons fit with eachother a bit better.
+
+November 3rd, 2022
+
+    Tired.
+
 --To-Do--
 
 -Properly style README / add live github and gifs/photos
@@ -44,3 +52,9 @@ October 28th, 2022
 -fix tech item red bar rounding error
 -add reminder text to tech logos
 -flower cutouts on slidey buttons
+
+-add setdata to rolodex cards
+-fix repo button transition being too fast
+-realistic letter tab and tab position based on project name.
+-fix rolodex angle after scrolling bug
+-fix blurry html/css icons
