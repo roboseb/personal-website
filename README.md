@@ -38,6 +38,8 @@ November 4th, 2022
 
     I believe the issue with the rolodex related to some rounding at some point during the process. So I just did a bit of math at the begginning, and now all the numbers start as whole, removing the problem. Works and looks great. Still not sure how I would clean up the z-index stuff. Still not sure why the cards aren't just stacked properly since they're in 3D space, but whatever.
 
+    Rolodex is done, and it looks pretty great.
+
 --To-Do--
 
 -Properly style README / add live github and gifs/photos

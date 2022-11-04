@@ -108,7 +108,7 @@ body.no-scroll {
     display: none;
 }
 
-#technologies {
+#featured-projects {
     display: none;
 } */
 
@@ -714,4 +714,98 @@ body.no-scroll {
 
 .card>*:not(.project) {
     pointer-events: none;
+}
+
+.styled #about {
+
+}
+
+.styled #about h2 {
+    margin: 0;
+    font-size: 4rem;
+    white-space: nowrap;
+    transition: all 1s;
+}
+
+#folder-container {
+    width: 100vw;
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+.styled #folder-container {
+    margin-top: 20px;
+    justify-content: center;
+
+    perspective-origin: 50%, 50%;
+    perspective: 2000px;
+}
+
+.styled #about-folder {
+    position: relative;
+
+    width: 700px;
+    height: 400px;
+    background-color: var(--tan);
+
+    transform-style: preserve-3d;
+    transform-origin: bottom;
+    transform: rotateY(-15deg) rotateX(-10deg);
+
+    transition: all 0.5s cubic-bezier(.35, .04, 0, 1.1);;
+    cursor: pointer;
+}
+
+.styled #about-folder:hover {
+    transform: translateY(20%) rotateY(-25deg) rotateX(-80deg);
+}
+
+.styled #about-folder::after {
+    content: '';
+    height: 10%;
+    width: 20%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transform: translate(0%, -90%);
+
+    background-color: var(--tan);
+}
+
+.styled #folder-back {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+    transform: rotateX(15deg);
+
+    background-color: red;
+
+    transition: all 0.5s cubic-bezier(.35, .04, 0, 1.1);;
+}
+
+.styled #folder-back::after {
+    content: '';
+    height: 10%;
+    width: 20%;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    transform: translate(0%, -90%);
+
+    background-color: red;
+}
+
+.styled #about-folder:hover>#folder-back {
+    transform: rotateX(155deg);
 }
