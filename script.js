@@ -1,127 +1,143 @@
 let animated = false;
 
 const projects = {
-    // CDFCG: {
-    //     code: 'CDFCG',
-    //     url: '',
-    //     title: 'Cool Deviantart',
-    //     desc: "This site is included for the sake of completeness. It's essentially just a collection of images masquerading as a copy of deviantart.",
-    //     tech: ['html.png', 'css.png', '', ''],
-    // },
-    // OdinRecipes: {
-    //     code: 'OdinRecipes',
-    //     url: '',
-    //     title: 'Odin Recipes',
-    //     desc: "The beginning of my journey with the Odin Project. A simple site that navigates between a home page and three recipe pages.",
-    //     tech: ['html.png', 'css.png', '', ''],
-    // },
-    // OdinLandingPage: {
-    //     code: 'OdinLandingPage',
-    //     url: 'odin-landing-page',
-    //     title: 'Odin Landing Page',
-    //     desc: "A site which aims to copy the reference images on the site itself. Another early Odin Project project.",
-    //     tech: ['html.png', 'css.png', '', ''],
-    // },
+    CDFCG: {
+        code: 'CDFCG',
+        repo: 'roboseb.github.io',
+        live: '',
+        title: 'Cool Deviantart',
+        desc: "This site is included for the sake of completeness. It's essentially just a collection of images masquerading as a copy of deviantart.",
+        tech: ['html.png', 'css.png', '', ''],
+    },
+    OdinRecipes: {
+        code: 'OdinRecipes',
+        repo: 'odin-recipes',
+        live: 'odin-recipes',
+        title: 'Odin Recipes',
+        desc: "The beginning of my journey with the Odin Project. A simple site that navigates between a home page and three recipe pages.",
+        tech: ['html.png', 'css.png', '', ''],
+    },
+    OdinLandingPage: {
+        code: 'OdinLandingPage',
+        repo: 'odin-landing-page',
+        live: 'odin-landing-page',
+        title: 'Odin Landing Page',
+        desc: "A site which aims to copy the reference images on the site itself. Another early Odin Project project.",
+        tech: ['html.png', 'css.png', '', ''],
+    },
 
-    // EtchASketch: {
-    //     code: 'EtchASketch',
-    //     url: 'etch-a-sketch',
-    //     title: 'Etch-a-Sketch',
-    //     desc: "This is essentially a grid-based drawing tool. Your two options are to reset the grid, or to generate a new grid with your choice of dimensions.",
-    //     tech: ['html.png', 'css.png', 'js.png', ''],
-    // },
+    EtchASketch: {
+        code: 'EtchASketch',
+        repo: 'etch-a-sketch',
+        live: 'etch-a-sketch',
+        title: 'Etch-a-Sketch',
+        desc: "This is essentially a grid-based drawing tool. Your two options are to reset the grid, or to generate a new grid with your choice of dimensions.",
+        tech: ['html.png', 'css.png', 'js.png', ''],
+    },
 
-    // RockPaperScissors: { 
-    //     code: 'RockPaperScissors',
-    //     url: 'rock-paper-scissors',
-    //     title: 'Rock Paper Scissors',
-    //     desc: "Rock paper scissors. You play as an elf who is afraid of losing. Watch her react as you either beat or lose to the computer opponent.",
-    //     tech: ['html.png', 'css.png', 'js.png', ''],
-    // },
+    RockPaperScissors: { 
+        code: 'RockPaperScissors',
+        repo: 'rock-paper-scissors',
+        live: 'rock-paper-scissors',
+        title: 'Rock Paper Scissors',
+        desc: "Rock paper scissors. You play as an elf who is afraid of losing. Watch her react as you either beat or lose to the computer opponent.",
+        tech: ['html.png', 'css.png', 'js.png', ''],
+    },
 
-    // Calculator: { 
-    //     code: 'Calculator',
-    //     url: 'calculator',
-    //     title: 'Calculator',
-    //     desc: "A calculator. Similar to rock paper scissors, a little pumpkin guy will give reactions to your inputs, including some secret ones.",
-    //     tech: ['html.png', 'css.png', 'js.png', ''],
-    // },
+    Calculator: { 
+        code: 'Calculator',
+        repo: 'calculator',
+        live: 'calculator',
+        title: 'Calculator',
+        desc: "A calculator. Similar to rock paper scissors, a little pumpkin guy will give reactions to your inputs, including some secret ones.",
+        tech: ['html.png', 'css.png', 'js.png', ''],
+    },
 
-    // SignUpForm: {
-    //     code: 'SignUpForm',
-    //     url: 'sign-up-form',
-    //     title: 'Sign-up Form',
-    //     desc: "A straightforward sign-up form that signs you up for nothing. Click the little head and see what happens.",
-    //     tech: ['html.png', 'css.png', 'js.png', ''],
-    // },
+    SignUpForm: {
+        code: 'SignUpForm',
+        repo: 'sign-up-form',
+        live: 'sign-up-form',
+        title: 'Sign-up Form',
+        desc: "A straightforward sign-up form that signs you up for nothing. Click the little head and see what happens.",
+        tech: ['html.png', 'css.png', 'js.png', ''],
+    },
 
-    // AdminDashboard: {
-    //     code: 'AdminDashboard',
-    //     url: 'admin-dashboard',
-    //     title: 'Waifunet',
-    //     desc: "A static mock up for a fake social media site focused on anime/manga waifus. Click on kurippi, your virtual assistant, for her tip of the day.",
-    //     tech: ['html.png', 'css.png', 'js.png', ''],
-    // },
+    AdminDashboard: {
+        code: 'AdminDashboard',
+        repo: 'admin-dashboard',
+        live: 'admin-dashboard',
+        title: 'Waifunet',
+        desc: "A static mock up for a fake social media site focused on anime/manga waifus. Click on kurippi, your virtual assistant, for her tip of the day.",
+        tech: ['html.png', 'css.png', 'js.png', ''],
+    },
 
-    // TicTacToe: {
-    //     code: 'TicTacToe',
-    //     url: 'tic-tac-toe',
-    //     title: 'Tic-Tac-Toe',
-    //     desc: "Play tic-tac-toe against an android who has been cursed with the inability to lose for all eternity.",
-    //     tech: ['html.png', 'css.png', 'js.png', ''],
-    // },
+    TicTacToe: {
+        code: 'TicTacToe',
+        repo: 'tic-tac-toe',
+        live: 'tic-tac-toe',
+        title: 'Tic-Tac-Toe',
+        desc: "Play tic-tac-toe against an android who has been cursed with the inability to lose for all eternity.",
+        tech: ['html.png', 'css.png', 'js.png', ''],
+    },
 
-    // Library: {
-    //     code: 'Library',
-    //     url: 'library',
-    //     title: 'Library',
-    //     desc: "An app that could theoretically track books which you've read. Includes some retro styling, and some randomly chosen cover art.",
-    //     tech: ['html.png', 'css.png', 'js.png', ''],
-    // },
+    Library: {
+        code: 'Library',
+        repo: 'library',
+        live: 'library',
+        title: 'Library',
+        desc: "An app that could theoretically track books which you've read. Includes some retro styling, and some randomly chosen cover art.",
+        tech: ['html.png', 'css.png', 'js.png', ''],
+    },
 
-    // RestaurantPage: {
-    //     code: 'RestaurantPage',
-    //     url: 'restaurant-page',
-    //     title: 'Restaurant Page',
-    //     desc: "A fake page for a real restaurant. The home page includes a unique dynamic image grid, which expands and shrinks images as you hover around it.",
-    //     tech: ['css.png', 'js.png', 'npm.png', 'webpack.png'],
-    // },
-    
-    // ToDoList: {
-    //     code:'ToDoList',
-    //     url: 'to-do-list',
-    //     title: 'To-Do List',
-    //     desc: "A unique spin on the to-do list. Or it was, but after some research it may be slightly less clever than I thought.",
-    //     tech: ['css.png', 'js.png', 'npm.png', 'webpack.png'],
-    // },
+    RestaurantPage: {
+        code: 'RestaurantPage',
+        repo: 'restaurant-page',
+        live: 'restaurant-page',
+        title: 'Restaurant Page',
+        desc: "A fake page for a real restaurant. The home page includes a unique dynamic image grid, which expands and shrinks images as you hover around it.",
+        tech: ['css.png', 'js.png', 'npm.png', 'webpack.png'],
+    },
 
-    // MobileFirst: {
-    //     code: 'MobileFirst',
-    //     url: 'mobile-first',
-    //     title: 'Mocchan and Jake',
-    //     desc: "A simple app designed initially with mobile in mind. Learn the heartwarming tale of Mocchan, a precocious little girl, and Jake, her baseball bat.",
-    //     tech: ['css.png', 'js.png', 'npm.png', 'webpack.png'],
-    // },
+    ToDoList: {
+        code:'ToDoList',
+        repo: 'to-do-list',
+        live: 'to-do-list',
+        title: 'To-Do List',
+        desc: "A unique spin on the to-do list. Or it was, but after some research it may be slightly less clever than I thought.",
+        tech: ['css.png', 'js.png', 'npm.png', 'webpack.png'],
+    },
 
-    // WeatherApp: {
-    //     code: 'WeatherApp',
-    //     url: 'weather-app',
-    //     title: 'Weather App',
-    //     desc: "An API-connected weather app. Animates current time and weather with our old friends, the sun and the moon.",
-    //     tech: ['css.png', 'js.png', 'npm.png', 'webpack.png'],
-    // },
+    MobileFirst: {
+        code: 'MobileFirst',
+        repo: 'mobile-first',
+        live: 'mobile-first',
+        title: 'Mocchan and Jake',
+        desc: "A simple app designed initially with mobile in mind. Learn the heartwarming tale of Mocchan, a precocious little girl, and Jake, her baseball bat.",
+        tech: ['css.png', 'js.png', 'npm.png', 'webpack.png'],
+    },
 
-    // JSValidate: {
-    //     code: 'JSValidate',
-    //     url: 'js-validate',
-    //     title: 'JS Validate',
-    //     desc: "A simple validation form that uses Javascript for custom validation parameters. Includes fun background animations!",
-    //     tech: ['html.png', 'css.png', 'js.png', ''],
-    // },
+    WeatherApp: {
+        code: 'WeatherApp',
+        repo: 'weather-app',
+        live: 'weather-app',
+        title: 'Weather App',
+        desc: "An API-connected weather app. Animates current time and weather with our old friends, the sun and the moon.",
+        tech: ['css.png', 'js.png', 'npm.png', 'webpack.png'],
+    },
+
+    JSValidate: {
+        code: 'JSValidate',
+        repo: 'js-validate',
+        live: 'js-validate',
+        title: 'JS Validate',
+        desc: "A simple validation form that uses Javascript for custom validation parameters. Includes fun background animations!",
+        tech: ['html.png', 'css.png', 'js.png', ''],
+    },
 
     HearthstoneAPI: {
         code: 'HearthstoneAPI',
-        url: 'hearthstone-api',
+        repo: 'hearthstone-api',
+        live: 'hearthstone-api',
         title: 'Hearthstone Memory',
         desc: "A memory game that used to be connected to an API, until the API briefly went down. It now uses a static set of cards.",
         tech: ['html.png', 'css.png', 'js.png', ''],
@@ -129,7 +145,8 @@ const projects = {
 
     Battleship: {
         code: 'Battleship',
-        url: 'battleship',
+        repo: 'battleship',
+        live: 'battleship',
         title: 'Battleship',
         desc: "A game of battleship where you are accompanied by your doting shipgirls. Don't fail them, for their love may begin to dwindle.",
         tech: ['css.png', 'js.png', 'npm.png', 'webpack.png'],
@@ -137,7 +154,8 @@ const projects = {
 
     CVProject: {
         code: 'CVProject',
-        url: 'cv-project',
+        repo: 'cv-project',
+        live: 'cv-project',
         title: 'CVGenDUO',
         desc: "A resume building app. Enter some basic info to create a simple resume. Or find out what happens when you click 'click me'",
         tech: ['css.png', 'js.png', 'npm.png', 'webpack.png'],
@@ -145,16 +163,18 @@ const projects = {
 
     MemoryCard: {
         code: 'MemoryCard',
-        url: 'memory-card-real',
+        repo: 'memory-card-real',
+        live: 'memory-card-real',
         title: 'Memory Card',
         desc: "An API-based game of memory. Click each card in a set of 9 once, but the cards change place between each click.",
         tech: ['css.png', 'js.png', 'npm.png', 'react.svg'],
-        
+
     },
 
     ShoppingCart: {
         code: 'ShoppingCart',
-        url: 'shopping-cart',
+        repo: 'shopping-cart',
+        live: 'shopping-cart',
         title: 'laythere.ca',
         desc: "A mock shopping site that uses images from an API to generate item listings that identical to wayfair's.",
         tech: ['css.png', 'js.png', 'npm.png', 'react.svg'],
@@ -162,7 +182,8 @@ const projects = {
 
     DragonQuest: {
         code: 'DragonQuest',
-        url: 'dragon-quest',
+        repo: 'dragon-quest',
+        live: 'dragon-quest',
         title: 'Dragon Quest',
         desc: "Similar to Where's Waldo, but stolen from a different book. Connects to Firebase for tracking high scores.",
         tech: ['js.png', 'npm.png', 'react.svg', 'firebase.png'],
@@ -170,7 +191,8 @@ const projects = {
 
     NubeClicker: {
         code: 'NubeClicker',
-        url: 'js-final-project',
+        repo: 'js-final-project',
+        live: 'js-final-project',
         title: 'Nube',
         desc: "A mobile-focused app in which you buy and sell Bored Apes. Sign in with Google, and have all your game data saved with Firebase.",
         tech: ['js.png', 'npm.png', 'react.svg', 'firebase.png'],
@@ -178,7 +200,8 @@ const projects = {
 
     Portfolio: {
         code: 'Portfolio',
-        url: '',
+        repo: 'portfolio',
+        live: 'portfolio',
         title: 'Portfolio',
         desc: 'My last portfolio project. Join Miko as you explore the immersive and relaxing island of my past work.',
         tech: ['css.png', 'js.png', 'npm.png', 'react.svg'],
@@ -186,7 +209,8 @@ const projects = {
 
     MiniMessagebricks: {
         code: 'MiniMessagebricks',
-        url: 'mini-message-board',
+        repo: 'mini-message-board',
+        heroku: 'https://secret-reef-82420.herokuapp.com',
         title: 'Mini Messagebricks',
         desc: 'A simple Node app for sharing messages. Click on bricks to have them slide around!',
         tech: ['npm.png', 'express.png', 'node-js.svg', 'pug.png'],
@@ -194,6 +218,8 @@ const projects = {
 
     Crudworld: {
         code: 'Crudworld',
+        repo: 'inventory-application',
+        heroku: 'https://crudworld.herokuapp.com/catalog/world/63190230ffaf580f3a523e3c',
         title: 'Crudworld',
         desc: 'A simulated world populated by cruddies, and created by users.',
         tech: ['node-js.svg', 'mongodb.svg', 'mongoose.png', 'pug.png'],
@@ -201,6 +227,8 @@ const projects = {
 
     DIM: {
         code: 'DIM',
+        repo: 'members-only',
+        heroku: 'https://guarded-fjord-47833.herokuapp.com/',
         title: 'Discord Instant Messenger',
         desc: 'A corrupted version of discord, with working accounts and messaging.',
         tech: ['node-js.svg', 'mongodb.svg', 'passport.svg', 'pug.png',],
@@ -208,16 +236,19 @@ const projects = {
 
     BlogApi: {
         code: 'BlogApi',
-        url: '',
+        repo: 'blog-api-client',
+        live: 'blog-api-client',
         title: 'Blog API',
         desc: 'A Blog API client. Built with react, and connected to a Node based API made by me.',
-        tech: ['react.png', 'mongodb.svg', 'mongoose.png', 'pug.png'],
+        tech: ['react.svg', 'mongodb.svg', 'mongoose.png', 'pug.png'],
     },
 
     SaikoKismet: {
         code: 'SaikoKismet',
+        repo: 'odin-book',
+        heroku: 'https://nameless-thicket-69102.herokuapp.com/',
         title: 'Saiko Kismet',
-        desc: 'A multiplayer dice game built into a full social media site. Capable of both online and local play, all without an account!',
+        desc: 'A multiplayer dice game built into a full social media site. Very much a work in progress.',
         tech: ['node-js.svg', 'mongodb.svg', 'socket.svg', 'pug.png'],
     },
 }
@@ -241,6 +272,10 @@ const animateContent = () => {
         body.classList.add('no-scroll');
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
         initCarousels();
+
+
+        // Initialize position for cards. 
+        setRoloPositions(1);
     }
 }
 
@@ -248,12 +283,12 @@ const animateContent = () => {
 const getOffset = (index) => {
     let pos = index;
 
-    if (pos > 9 && pos < 19) {
+    if (pos > 9 && pos <= 19) {
         pos = pos - 10;
-    } else if (pos > 19 && pos < 29) {
+    } else if (pos > 19 && pos <= 29) {
         pos = pos - 20;
     }
-    
+
     return `${pos * 10}%`;
 }
 
@@ -317,18 +352,26 @@ const addCard = (projectData, index) => {
 
 let roloIndex = [];
 
+// Variables for properly spacing and rotating cards.
+let usedSpace = 200;
+let cardGap;
+let cardSpacer;
+
 // Shift the position of all cards in the rolodex.
 const setRoloPositions = (mod) => {
+
+    // Calculate angles to evenly space cards using round numbers.
+    cardGap = Math.round(usedSpace / (roloIndex.length - 1))
+    cardSpacer = 360 - (cardGap * (roloIndex.length - 1));
+    console.log(cardGap, cardSpacer)
 
     // Update card angles and stacking contexts.
     const cards = Array.from(document.querySelectorAll('.card'));
     cards.forEach((card, index) => {
-        let angle = (index) * (200 / (roloIndex.length - 1));
+        let angle = (index) * (cardGap);
 
         card.dataset.angle = angle;
-        card.style.transform = `rotateY(30deg) rotateX(${angle}deg)`;
-
-        console.log(index);
+        card.style.transform = `rotateX(${angle}deg)`;
 
         //Fix stacking context based on card position.
         if (angle < 90) {
@@ -365,11 +408,11 @@ const updateRoloPositions = (mod) => {
 
     cards.forEach((card, index) => {
 
-        let bonus = 200 / (roloIndex.length - 1);
+        let bonus = cardGap;
 
         // If top or bottom card, depending on mod, increase bonus.
         if (mod === -1 && parseInt(card.dataset.index) === topIndex) {
-            bonus = 160;
+            bonus = cardSpacer;
             const content = card.querySelector('.project');
             content.classList.add('back');
         } else {
@@ -378,12 +421,12 @@ const updateRoloPositions = (mod) => {
         }
 
         if (mod === 1 && parseInt(card.dataset.index) === bottomIndex) {
-            bonus = 160;
+            bonus = cardSpacer;
         }
 
         const angle = parseInt(card.dataset.angle) + (bonus * mod);
 
-        card.style.transform = `rotateY(30deg) rotateX(${angle}deg)`;
+        card.style.transform = `rotateX(${angle}deg)`;
         card.dataset.angle = angle;
 
         // Update stacking context.
@@ -400,6 +443,12 @@ const updateRoloPositions = (mod) => {
     });
 
     topIndex += (mod * -1);
+
+    // Animate the rolodex scrolling cap/knob.
+    const cap = document.getElementById('rolodex-cap');
+    const capAngle = parseInt(cap.dataset.angle) + (cardGap * mod * -1);
+    cap.dataset.angle = capAngle;
+    cap.style.transform = `translate(-100%, 50%) rotateY(-90deg) rotateZ(${capAngle}deg)`;
 }
 
 // Initialize values and listeners.
@@ -422,6 +471,17 @@ const init = (() => {
 
         // If not animated, skip snap scrolling.
         if (!animated) return;
+
+        // Prevent scrolling page when scrolling in rolodex.
+        if (e.target && e.target.id === 'rolodex' ||
+            e.target.parentElement && e.target.parentElement.id === 'rolodex' ||
+            e.target.parentElement.parentElement && e.target.parentElement.parentElement.id === 'rolodex' ||
+            e.target.parentElement.parentElement.parentElement && e.target.parentElement.parentElement.parentElement.id === 'rolodex' ||
+            e.target.parentElement.parentElement.parentElement.parentElement && e.target.parentElement.parentElement.parentElement.parentElement.id === 'rolodex') {
+            return;
+        }
+
+        console.log(e.target);
 
         e.preventDefault();
 
@@ -526,13 +586,6 @@ const init = (() => {
         roloIndex.push(roloIndex.length);
     });
 
-
-    // Add listerners......
-    // const cards = Array.from(document.querySelectorAll('.card'));
-    // cards.forEach(card => {
-
-    // });
-
     const rolodex = document.getElementById('rolodex');
     rolodex.addEventListener('wheel', (e) => {
 
@@ -548,10 +601,14 @@ const init = (() => {
         }
     });
 
-
-
-    // Initialize position for cards. 
-    setRoloPositions(1);
+    const capSides = Array.from(document.querySelectorAll('.cap-side'));
+    capSides.forEach((side, index) => {
+        side.style.transform = `translate(-50%, -50%) 
+                                rotate(${index * 36}deg) 
+                                translate(100%, 0%) 
+                                rotateY(90deg) 
+                                translate(50%, 0%)`;
+    });
 })();
 
 // Setup animations for tech carousels.
@@ -584,10 +641,10 @@ const projectCards = Array.from(document.querySelectorAll('.project'));
 projectCards.forEach(project => {
     project.addEventListener('click', () => {
         let box = document.querySelector('.selected-project-box');
-        
+
         if (project.parentElement.classList.contains('card')) {
             box = document.querySelector('.rolodex-project-box');
-            
+
             const name = project.parentElement.dataset.name;
             console.log(name)
 
@@ -611,6 +668,21 @@ const loadProject = (project, box, code) => {
 
     const img = box.querySelector('.selected-project-img');
     img.style.backgroundImage = `url("site_images/${code}.gif")`;
+
+    const repoBox = box.querySelector('.selected-project-github');
+    const repo = repoBox.querySelector('a');
+    repo.setAttribute('href', `http://github.com/roboseb/${project.repo}`);
+
+    const liveBox = box.querySelector('.selected-project-live');
+    const live = liveBox.querySelector('a');
+
+    // Have link send user to either github live or heroku app.
+    if (project.live) {
+        live.setAttribute('href', `http://roboseb.github.io/${project.live}`);
+    } else {
+        live.setAttribute('href', project.heroku);
+    }
+    
 
     img.classList.remove('visible');
     void img.offsetWidth;

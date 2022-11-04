@@ -100,17 +100,17 @@ body.no-scroll {
     width: 100% !important;
 }
 
-#main-title {
+/* #main-title {
     display: none;
 }
 
-#featured-projects {
+#other-projects {
     display: none;
 }
 
 #technologies {
     display: none;
-}
+} */
 
 #main-title h1 {
     background-clip: text;
@@ -227,6 +227,10 @@ body.no-scroll {
     flex-wrap: initial;
 
     justify-content: center;
+    gap: 4rem;
+}
+
+.styled #featured-projects .featured-box {
     gap: 20px;
 }
 
@@ -258,7 +262,7 @@ body.no-scroll {
     filter: brightness(0.85);
 }
 
-.styled .transform-wrapper:not(.card)::after {
+.styled .transform-wrapper:not(.card)>.project::after {
     content: '';
     height: 10%;
     width: 10%;
@@ -527,7 +531,7 @@ body.no-scroll {
             rgba(20,17,21,0) 50%, 
             rgba(20,17,21,0) 100%);
 
-    background-size: 400%;
+    background-size: 200% 200%;
     background-position: 100% 0%;
 
 }
@@ -537,17 +541,16 @@ body.no-scroll {
     color: black;
 }
 
-
 .styled .selected-project-live {
     border-width: 5px 5px 0px 0px; 
     background: rgb(255,0,0);
-    background: linear-gradient(236deg, 
+    background: linear-gradient(225deg, 
             rgba(255,0,0,1) 0%, 
             rgba(255,0,0,1) 50%, 
             rgba(20,17,21,0) 50%, 
             rgba(20,17,21,0) 100%);
 
-    background-size: 400%;
+    background-size: 200% 200%;
     background-position: 0% 100%;
 }
 
@@ -561,6 +564,8 @@ body.no-scroll {
     color: var(--tan);
     text-decoration: none;
 
+    text-align: center;
+
     position: absolute;
     top: 0;
     left: 0;
@@ -568,6 +573,11 @@ body.no-scroll {
     height: 100%;
     width: 100%;
 } 
+
+#other-projects>.featured-box {
+    perspective: 2000px;
+    perspective-origin: 50% 50%;
+}
 
 .styled #rolodex {
     height: 30vh;
@@ -577,8 +587,64 @@ body.no-scroll {
     perspective: 2000px;
     perspective-origin: 0% 100%;
 
+    transform: rotateX(0deg) rotateY(12deg);
+
+    transform-style: preserve-3d;
+
     position: relative;
+
+    transition: all 0.5s;
 } 
+
+.styled #rolodex-cap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+
+    height: 6rem;
+    width: 6rem;
+    border-radius: 100%;
+    background-color: red;
+
+    transform-style: preserve-3d;
+    transform: translate(-100%, 50%) rotateY(-90deg);
+
+    transition: all 0.2s;
+}
+
+.styled #cap-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    background-color: red;
+
+    transform: translate(-50%, -50%) translateZ(-3rem);
+}
+
+.styled .cap-side {
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 50%;
+    height: 33%;
+    background-color: red;
+    border: 2px solid black;
+
+    transform-origin: center;
+    transform:
+        translate(-50%, -50%) 
+        rotate(0deg) 
+        translate(100%, 0%) 
+        rotateY(90deg) 
+        translate(50%, 0%);
+}
 
 .styled #rolodex .card:not(.filler) {
     box-sizing: border-box;
@@ -590,6 +656,8 @@ body.no-scroll {
     position: absolute;
     top: 0;
     left: 0;
+
+    border-bottom: 10px solid red; 
 
     transition: all 0.4s;
 }
@@ -638,4 +706,12 @@ body.no-scroll {
 
 .styled #rolodex .transform-wrapper>.card-back>.card-back-text {
     transform: scaleY(-1);
+}
+
+.styled #rolodex:hover {
+    transform: rotateX(-12deg) rotateY(-12deg);
+}
+
+.card>*:not(.project) {
+    pointer-events: none;
 }

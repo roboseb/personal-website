@@ -30,6 +30,14 @@ November 3rd, 2022
 
     Tired.
 
+November 4th, 2022
+
+    Less tired.
+
+    I think the rolodex is almost done, which is nice. My past projects are mostly digitized, outside of having the repo/live links. There is however a noticible error in my math when scrolling a few times in the same direction, where the entire rolodex starts to rotate excessively backwards, which I will probably need to fix first thing today. Then I just need to come up with a cute section for technologies, and decide what I want on the final contact page. Maybe a section to email me.
+
+    I believe the issue with the rolodex related to some rounding at some point during the process. So I just did a bit of math at the begginning, and now all the numbers start as whole, removing the problem. Works and looks great. Still not sure how I would clean up the z-index stuff. Still not sure why the cards aren't just stacked properly since they're in 3D space, but whatever.
+
 --To-Do--
 
 -Properly style README / add live github and gifs/photos
@@ -44,17 +52,20 @@ November 3rd, 2022
 -socket icon by socket mafia on iconscout
 -pug icon stolen from pug repo and cleaned by me
 
--folder clicking and emptying out animation (including for rolodex)
--fix project 3d folders not snapping back
--folders that actually open?
+CANCEL-folder clicking and emptying out animation (including for rolodex)
+DONE-fix project 3d folders not snapping back
+CANCEL-folders that actually open?
 -retrigger animations on scroll in
--replace images with gifs in the end
+DONE-replace images with gifs in the end
 -fix tech item red bar rounding error
 -add reminder text to tech logos
 -flower cutouts on slidey buttons
 
--add setdata to rolodex cards
--fix repo button transition being too fast
--realistic letter tab and tab position based on project name.
--fix rolodex angle after scrolling bug
+DONE-add setdata to rolodex cards
+Done-fix repo button transition being too fast
+DONE-realistic letter tab and tab position based on project name.
+DONE-fix rolodex angle after scrolling bug
 -fix blurry html/css icons
+-email section on the contact page?
+-scroll indicator for page/rolodex
+-different font for p elements
