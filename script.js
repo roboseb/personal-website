@@ -650,6 +650,18 @@ const init = (() => {
 
         techItem.appendChild(rarity);
     });
+
+    // Stagger sides on coin.
+    const coinSides = Array.from(document.querySelectorAll('.coin-side'));
+    coinSides.forEach((side, index) => {
+        side.style.transform = `translate(-50%, -50%) 
+                                rotate(${index * 36}deg) 
+                                translate(500%, 0%) 
+                                rotateY(90deg) 
+                                translate(50%, 0%)`;
+    });
+
+    // Flip coin on click.
 })();
 
 // Setup animations for tech carousels.

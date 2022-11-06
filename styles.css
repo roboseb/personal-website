@@ -100,7 +100,7 @@ body.no-scroll {
     width: 100% !important;
 }
 
-/* #main-title {
+#main-title {
     display: none;
 }
 
@@ -110,7 +110,11 @@ body.no-scroll {
 
 #featured-projects {
     display: none;
-} */
+}
+
+#about {
+    display: none;
+}
 
 #main-title h1 {
     background-clip: text;
@@ -596,7 +600,8 @@ body.no-scroll {
     transition: all 0.5s;
 } 
 
-.styled #rolodex-cap {
+.styled #rolodex-cap,
+.styled #coin {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -613,7 +618,8 @@ body.no-scroll {
     transition: all 0.2s;
 }
 
-.styled #cap-2 {
+.styled #cap-2,
+.styled #coin-2 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -626,7 +632,8 @@ body.no-scroll {
     transform: translate(-50%, -50%) translateZ(-3rem);
 }
 
-.styled .cap-side {
+.styled .cap-side,
+.styled .coin-side {
     box-sizing: border-box;
     position: absolute;
     top: 50%;
@@ -993,4 +1000,80 @@ body.no-scroll {
 
 .styled #about-file>p {
     margin: 15px;
+}
+
+.styled #contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact h2 {
+    transition: all 1s;
+    white-space: nowrap;
+}
+
+.styled #contact h2{
+    font-size: 3rem;
+    margin: 0 0 40px 0;
+}
+
+.styled #contact-box {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 4fr 1fr;
+
+    background-color: red;
+
+    height: 400px;
+    width: 550px;
+}
+
+.styled #link-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.styled #coin-box {
+    background-color: var(--tan);
+    position: relative;
+
+    perspective: 2000px;
+    perspective-origin: 0% 100%;
+}
+
+.styled #contact-box>#coin-box>#coin {
+    background-color: goldenrod;
+    border: 2px solid black;
+    transform: rotateY(180deg);
+
+    transform: rotateX(45deg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: black;
+    cursor: pointer;
+}
+
+.styled #contact-box>#coin-box>#coin:hover {
+    transform: rotateX(20deg);
+}
+
+.styled #contact-box>#coin-box>#coin>.coin-side {
+    width: 10%;
+    transform: translate(-50%, -50%) rotate(0deg) translate(500%, 0) rotateY(90deg) translate(50%, 0%);
+    background-color: rgb(163, 121, 14);
+}
+
+.styled #contact-box>#coin-box>#coin>#coin-2 {
+    background-color: goldenrod;
+    transform: translate(-50%, -50%) translateZ(-0.5rem);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: black;
 }

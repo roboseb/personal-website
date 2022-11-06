@@ -79,3 +79,4 @@ DONE-fix rolodex angle after scrolling bug
 -scroll indicator for page/rolodex
 -different font for p elements
 -custom little pointy help box
+-"haha, jk" when loading into main styled page
