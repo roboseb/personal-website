@@ -40,6 +40,12 @@ November 4th, 2022
 
     Rolodex is done, and it looks pretty great.
 
+November 5th, 2022
+
+    Met two web developers on omegle last night. One didn't seems particularly insightful, but the other took a look at this project. He seemed to think the rolodex was pretty cool, which was my intent, but he also looked at Discord Instant Messenger and mentioned that it would be more informative to a potential employer. Also mentioned figma, and that if I can recreate UIs from mock-ups, that's pretty valuable. Also we tested the site with devtools' lighthouse, and the performance was shit, which was mostly expected. This portfolio is not practical, but instead more of a cute little showcase of the kinds of things I can make.
+
+    Many collectable toys come with a small sheet listing all available toys in a given set. My technology section is gonna be one of those, with each framework or library being a little funko pop ripoff guy. 
+
 --To-Do--
 
 -Properly style README / add live github and gifs/photos
@@ -53,6 +59,7 @@ November 4th, 2022
 -node icon icon 54 on iconscout
 -socket icon by socket mafia on iconscout
 -pug icon stolen from pug repo and cleaned by me
+-funko pop base by josephriley on cults3d.com
 
 CANCEL-folder clicking and emptying out animation (including for rolodex)
 DONE-fix project 3d folders not snapping back
@@ -67,7 +74,8 @@ DONE-add setdata to rolodex cards
 Done-fix repo button transition being too fast
 DONE-realistic letter tab and tab position based on project name.
 DONE-fix rolodex angle after scrolling bug
--fix blurry html/css icons
+-fix blurry html/css icons (%resize issue?)
 -email section on the contact page?
 -scroll indicator for page/rolodex
 -different font for p elements
+-custom little pointy help box

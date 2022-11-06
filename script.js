@@ -609,6 +609,47 @@ const init = (() => {
                                 rotateY(90deg) 
                                 translate(50%, 0%)`;
     });
+
+    // Initialize all tech pops based on tech array.
+    const techGrid = document.getElementById('tech-grid');
+    const gridTech = ['html', 'css', 'js', 'npm', 'webpack', 'react', 'firebase', 'node', 'express', 'pug', 'passport', 'socket'];
+    const titles = ['HTML', 'CSS', 'Javascript', 'npm', 'Webpack', 'React', 'Firebase', 'Node.js', 'Exprese', 'Pug.js', 'Passport.js', 'Socket.io']
+    const rarities = ['Common', 'Common', 'Common', 'Common', 'Uncommon', 'Uncommon', 'Uncommon', 'Uncommon', 'Uncommon', 'Rare', 'Rare', 'Mythic']
+
+
+    gridTech.forEach((item, index) => {
+        const techItem = document.createElement('div');
+        techItem.classList.add('grid-pop');
+        techItem.style.backgroundImage = 'url("dudes/dude-base.png")';
+        techGrid.appendChild(techItem);
+
+        const icon = document.createElement('div');
+        icon.classList.add('pop-icon');
+        icon.style.backgroundImage = `url("dudes/${item}-face.png")`;
+        techItem.appendChild(icon);
+
+        const name = document.createElement('div');
+        name.classList.add('pop-name');
+        name.innerText = titles[index];
+        techItem.appendChild(name);
+
+        const rarity = document.createElement('div');
+        rarity.classList.add('pop-rarity');
+        rarity.innerText = rarities[index];
+
+        // Set rarity text color based on rarity.
+        if (rarities[index] === 'Common') {
+            rarity.style.color = 'black';
+        } else if (rarities[index] === 'Uncommon') {
+            rarity.style.color = 'darkgreen';
+        } else if (rarities[index] === 'Rare') {
+            rarity.style.color = 'darkblue';
+        } else if (rarities[index] === 'Mythic') {
+            rarity.style.color = 'darkred';
+        }
+
+        techItem.appendChild(rarity);
+    });
 })();
 
 // Setup animations for tech carousels.

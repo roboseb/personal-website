@@ -735,7 +735,7 @@ body.no-scroll {
 }
 
 .styled #folder-container {
-    margin-top: 20px;
+    margin-top: 60px;
     justify-content: center;
 
     perspective-origin: 50%, 50%;
@@ -752,9 +752,18 @@ body.no-scroll {
     transform-style: preserve-3d;
     transform-origin: bottom;
     transform: rotateY(-15deg) rotateX(-10deg);
+    color: black;
 
     transition: all 0.5s cubic-bezier(.35, .04, 0, 1.1);;
     cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.styled #folder-text {
+    font-size: 3rem;
 }
 
 .styled #about-folder:hover {
@@ -808,4 +817,180 @@ body.no-scroll {
 
 .styled #about-folder:hover>#folder-back {
     transform: rotateX(155deg);
+}
+
+.styled #about-file {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    height: 100%;
+    width: 100%;
+
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+
+    color: black;
+    background-color: #6b6d51;
+    transform: rotateX(10deg) translate(3%, -3%);
+
+    transition: all 0.5s cubic-bezier(.35, .04, 0, 1.1), background-color 0.2s;
+}
+
+.styled #about-folder:hover>#about-file:hover{
+    transform: rotateX(80deg) translate(-20%, -30%) rotateY(10deg) translateZ(-50px);
+}
+
+.styled #about-folder:hover>#about-file {
+    background-color: #e5e9b3;
+    transform: rotateX(80deg) translate(-20%, -30%) rotateY(10deg) translateZ(-200px);
+}
+
+.styled #tech-file {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    height: 100%;
+    width: 100%;
+
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+
+    background-color: #5b5d40;
+    transform: rotateX(15deg) translate(6%, -6%);
+
+    transition: all 0.5s cubic-bezier(.35, .04, 0, 1.1), background-color 0.2s;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.styled #about-folder:hover>#tech-file:hover {
+    transform: rotateX(80deg) translate(15%, -30%) rotateY(10deg) translateZ(-150px);
+}
+
+.styled #about-folder:hover>#tech-file {
+    background-color: #b5b982;
+    transform: rotateX(80deg) translate(15%, -30%) rotateY(10deg) translateZ(-200px);
+}
+
+.styled #tech-grid {
+    box-sizing: border-box;
+    flex-grow: 1;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    row-gap: 10px;
+    column-gap: 10px;
+    padding: 0 10px 10px 10px;
+}
+
+.styled .grid-pop {
+    background-color: var(--tan);
+    border-radius: 10px;
+
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    position: relative;
+    overflow: hidden;
+
+    transition: all 0.2s cubic-bezier(.35, .04, 0, 1.1);
+}
+
+.styled .grid-pop:hover {
+    background-color: #b5b982;
+}
+
+.styled .pop-icon {
+    position: absolute;
+    top: 0;
+    left: 8%;
+
+    height: 100%;
+    width: 100%;
+
+    background-position: left;
+    background-size: auto 85%;
+    background-repeat: no-repeat;
+}
+
+.styled .pop-name {
+    position: absolute;
+    right: 0;
+    top: 50%;
+
+    transform-origin: center;
+    transform: translate(50%, -50%) rotate(-90deg) translate(0%, -20px);
+
+    background-color: var(--xiketic);
+    color: var(--tan);
+    padding: 12px;
+    width: 100%;
+
+    text-align: center;
+    font-family: sans-serif;
+
+    transition: all 0.2s cubic-bezier(.35, .04, 0, 1.1);
+}
+
+.styled .grid-pop:hover .pop-name {
+    transform: translate(50%, -50%) rotate(-90deg) translate(100%, -20px);
+}
+
+.styled .pop-rarity {
+    position: absolute;
+    right: 0;
+    top: 50%;
+
+    transform-origin: center;
+    transform: translate(50%, -50%) rotate(-90deg) translate(-100%, -20px);
+
+    background-color: #b5b982;
+    color: red;
+    padding: 12px;
+    width: 100%;
+
+    text-align: center;
+    font-family: sans-serif;
+
+    transition: all 0.2s cubic-bezier(.35, .04, 0, 1.1);
+}
+
+.styled .grid-pop:hover .pop-rarity {
+    transform: translate(50%, -50%) rotate(-90deg) translate(-0%, -20px);
+}
+
+.styled #tech-grid-header {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    font-size: 2rem;
+    padding: 10px;
+}
+
+#about-file {
+    display: flex;
+    flex-direction: column;
+}
+
+.styled #about-file-header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    font-size: 2rem;
+    padding: 10px 10px 0 10px;
+}
+
+.styled #about-file>p {
+    margin: 15px;
 }
