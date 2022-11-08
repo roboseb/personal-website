@@ -35,7 +35,7 @@ const projects = {
         tech: ['html.png', 'css.png', 'js.png', ''],
     },
 
-    RockPaperScissors: { 
+    RockPaperScissors: {
         code: 'RockPaperScissors',
         repo: 'rock-paper-scissors',
         live: 'rock-paper-scissors',
@@ -44,7 +44,7 @@ const projects = {
         tech: ['html.png', 'css.png', 'js.png', ''],
     },
 
-    Calculator: { 
+    Calculator: {
         code: 'Calculator',
         repo: 'calculator',
         live: 'calculator',
@@ -99,7 +99,7 @@ const projects = {
     },
 
     ToDoList: {
-        code:'ToDoList',
+        code: 'ToDoList',
         repo: 'to-do-list',
         live: 'to-do-list',
         title: 'To-Do List',
@@ -451,6 +451,38 @@ const updateRoloPositions = (mod) => {
     cap.style.transform = `translate(-100%, 50%) rotateY(-90deg) rotateZ(${capAngle}deg)`;
 }
 
+
+// Animate flipping the hire coin.
+const flipCoin = (coin) => {
+    const yesTexts = ["It is certain", "It is decidedly so.", "Withouth a doubt.", "Yes - definitely.", "You may rely on it.", "As I see it, yes.", "Outlook good.", "Signs point to yes."]
+    const maybeTexts = ["Reply hazy, try again.", "Ask again later.", "Cannot predict now."]
+
+    // Animate coin jumping up.
+    const wrap = coin.parentElement;
+    wrap.classList.remove('flipping');
+    void wrap.offsetWidth;
+    wrap.classList.add('flipping');
+
+    // Update coin text.
+    setTimeout(() => {
+        const tails = document.getElementById('coin-tails');
+        tails.innerText = yesTexts[Math.floor(Math.random() * yesTexts.length)];
+
+        const heads = document.getElementById('coin-heads');
+        heads.innerText = maybeTexts[Math.floor(Math.random() * maybeTexts.length)];
+    }, 400);
+
+    // Roll for amount of flips and flip direction.
+    let flipCount = Math.floor(Math.random() * 4) + 4;
+    let angle = flipCount * 180 * (Math.random() > 0.5 ? 1 : -1);
+
+    let newAngle = parseInt(coin.dataset.angle) + angle;
+
+    // Update dataset's angle and displayed angle.
+    coin.dataset.angle = newAngle;
+    coin.style.transform = `translate(-50%, 0) rotateX(${newAngle}deg)`;
+}
+
 // Initialize values and listeners.
 const init = (() => {
     // Add inline style to sections for smooth transitioning.
@@ -558,6 +590,15 @@ const init = (() => {
         el.style.transform = transforms.apply(null, xyEl);
     }
 
+    // Return transform specifically for a link button.
+    const transformButton = (el, xyEl) => {
+        let constrain = 40;
+        let box = el.getBoundingClientRect();
+        let calcY = (xyEl[0] - box.x - (box.width / 2)) / constrain;
+
+        el.style.transform = `rotateY(${calcY}deg) translateZ(65px)`;
+    }
+
     const containers = Array.from(document.querySelectorAll('.transform-wrapper'));
     containers.forEach(container => {
         let box = container.querySelector('.box');
@@ -569,14 +610,21 @@ const init = (() => {
             let position = xy.concat([box]);
 
             window.requestAnimationFrame(function () {
-                transformElement(box, position);
+                if (container.classList.contains('contact-wrapper')) {
+                    transformButton(box, position);
+                } else {
+                    transformElement(box, position);
+                }
             });
-
-
         };
 
         container.onmouseleave = function (e) {
-            box.style.transform = 'matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1)';
+            // Negate transform specifically for a contact link.
+            if (container.classList.contains('contact-wrapper')) {
+                box.style.transform = 'rotateY(0deg) translateZ(65px)';
+            } else {
+                box.style.transform = 'matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1)';
+            }
         }
     });
 
@@ -662,6 +710,34 @@ const init = (() => {
     });
 
     // Flip coin on click.
+    const coin = document.getElementById('coin');
+    coin.addEventListener('click', () => flipCoin(coin));
+
+    // Add hover listeners for changing angle of credits box.
+    const creditsBox = document.getElementById('credits-box');
+    creditsBox.addEventListener('mouseenter', () => {
+        if (!animated) return;
+        creditsBox.parentElement.classList.add('credits-hover');
+    });
+    creditsBox.addEventListener('mouseleave', () => {
+        if (!animated) return;
+        creditsBox.parentElement.classList.remove('credits-hover');
+    });
+
+    // Add hover listeners for changing angle of credits page.
+    const creditsPage = document.getElementById('credits-page');
+    creditsPage.addEventListener('mouseenter', () => {
+        if (!animated) return;
+        creditsPage.classList.add('credits-hover');
+        setTimeout(() => {
+            creditsPage.classList.add('credits-angled');
+        }, 250);
+    });
+    creditsPage.addEventListener('mouseleave', () => {
+        if (!animated) return;
+        creditsPage.classList.remove('credits-hover');
+        creditsPage.classList.remove('credits-angled');
+    });
 })();
 
 // Setup animations for tech carousels.
@@ -735,7 +811,7 @@ const loadProject = (project, box, code) => {
     } else {
         live.setAttribute('href', project.heroku);
     }
-    
+
 
     img.classList.remove('visible');
     void img.offsetWidth;

@@ -46,6 +46,10 @@ November 5th, 2022
 
     Many collectable toys come with a small sheet listing all available toys in a given set. My technology section is gonna be one of those, with each framework or library being a little funko pop ripoff guy. 
 
+November 7th, 2022
+
+    Back at it again. Contact page is the last big thing to get done, then just some minor additions throughout. Contact page should be easily done today, and then with the rest of the day and all of tomorrow it might be looking pretty good. Definitely took longer than I thought, but even now it looks pretty dope.
+
 --To-Do--
 
 -Properly style README / add live github and gifs/photos
@@ -60,6 +64,8 @@ November 5th, 2022
 -socket icon by socket mafia on iconscout
 -pug icon stolen from pug repo and cleaned by me
 -funko pop base by josephriley on cults3d.com
+-base gravity logic by Doin on stackoverflow https://stackoverflow.com/questions/15423736/how-to-get-a-gravity-effect-in-a-css-animation
+-(credit for stolen button perspective hover)
 
 CANCEL-folder clicking and emptying out animation (including for rolodex)
 DONE-fix project 3d folders not snapping back
@@ -80,3 +86,6 @@ DONE-fix rolodex angle after scrolling bug
 -different font for p elements
 -custom little pointy help box
 -"haha, jk" when loading into main styled page
+- explanation in credits for what the contact pages office equipment is
+-flat looking credits page that transitions seamlessly to 3d buttons
+-faq section
