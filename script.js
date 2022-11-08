@@ -597,6 +597,10 @@ const init = (() => {
         let calcY = (xyEl[0] - box.x - (box.width / 2)) / constrain;
 
         el.style.transform = `rotateY(${calcY}deg) translateZ(65px)`;
+
+        if (el.classList.contains('box-2d')) {
+            el.style.transform = `rotateX(180deg) translateZ(40px) rotateY(${calcY}deg)`;
+        }
     }
 
     const containers = Array.from(document.querySelectorAll('.transform-wrapper'));
@@ -620,7 +624,9 @@ const init = (() => {
 
         container.onmouseleave = function (e) {
             // Negate transform specifically for a contact link.
-            if (container.classList.contains('contact-wrapper')) {
+            if (container.classList.contains('wrapper-2d')) {
+                box.style.transform = 'rotateX(180deg) translateZ(40px)';
+            } else if (container.classList.contains('contact-wrapper')) {
                 box.style.transform = 'rotateY(0deg) translateZ(65px)';
             } else {
                 box.style.transform = 'matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1)';
@@ -724,17 +730,20 @@ const init = (() => {
         creditsBox.parentElement.classList.remove('credits-hover');
     });
 
+    let creditsTimeout;
+
     // Add hover listeners for changing angle of credits page.
     const creditsPage = document.getElementById('credits-page');
     creditsPage.addEventListener('mouseenter', () => {
         if (!animated) return;
         creditsPage.classList.add('credits-hover');
-        setTimeout(() => {
+        creditsTimeout = setTimeout(() => {
             creditsPage.classList.add('credits-angled');
         }, 250);
     });
     creditsPage.addEventListener('mouseleave', () => {
         if (!animated) return;
+        clearTimeout(creditsTimeout);
         creditsPage.classList.remove('credits-hover');
         creditsPage.classList.remove('credits-angled');
     });

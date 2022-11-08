@@ -50,6 +50,10 @@ November 7th, 2022
 
     Back at it again. Contact page is the last big thing to get done, then just some minor additions throughout. Contact page should be easily done today, and then with the rest of the day and all of tomorrow it might be looking pretty good. Definitely took longer than I thought, but even now it looks pretty dope.
 
+November 8th, 2022
+
+    Last day? Who knows, but we'll see. Hoping I can quickly fix the text blur issue on some elements, as that's one of the most annoying things left. Then to start finishing up some items from the to-do list.
+
 --To-Do--
 
 -Properly style README / add live github and gifs/photos
