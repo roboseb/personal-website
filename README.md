@@ -58,11 +58,11 @@ November 8th, 2022
 
 -Properly style README / add live github and gifs/photos
 -add this project to all projects list (recursive)
--animated pips 
--differnt background colors for different sections
--more floral motif
+DONE-animated pips 
+CANCEL-differnt background colors for different sections
+DONE-more floral motif
 
--credits page (Armandocanals.com for 3d transform)
+DONE-credits page (Armandocanals.com for 3d transform)
 -mongodb icon by Icon 54 on iconscout
 -node icon icon 54 on iconscout
 -socket icon by socket mafia on iconscout
@@ -74,22 +74,24 @@ November 8th, 2022
 CANCEL-folder clicking and emptying out animation (including for rolodex)
 DONE-fix project 3d folders not snapping back
 CANCEL-folders that actually open?
--retrigger animations on scroll in
-DONE-replace images with gifs in the end
--fix tech item red bar rounding error
+CANCEL-retrigger animations on scroll in
+-replace images with gifs in the end
+DONE?????-fix tech item red bar rounding error
 -add reminder text to tech logos
--flower cutouts on slidey buttons
+DONE-flower cutouts on slidey buttons
 
 DONE-add setdata to rolodex cards
 Done-fix repo button transition being too fast
 DONE-realistic letter tab and tab position based on project name.
 DONE-fix rolodex angle after scrolling bug
--fix blurry html/css icons (%resize issue?)
--email section on the contact page?
--scroll indicator for page/rolodex
+DONE?????-fix blurry html/css icons (%resize issue?)
+DONE(SORTA)-email section on the contact page?
+DONE-scroll indicator for page/rolodex
 -different font for p elements
 -custom little pointy help box
 -"haha, jk" when loading into main styled page
-- explanation in credits for what the contact pages office equipment is
--flat looking credits page that transitions seamlessly to 3d buttons
--faq section
+DONE-explanation in credits for what the contact pages office equipment is
+CANCEL-flat looking credits page that transitions seamlessly to 3d buttons
+DONE-faq section
+-modals
+-reminder text bubbles

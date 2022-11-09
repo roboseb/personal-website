@@ -482,6 +482,16 @@ const flipCoin = (coin) => {
     coin.dataset.angle = newAngle;
     coin.style.transform = `translate(-50%, 0) rotateX(${newAngle}deg)`;
 }
+// Update page indicator pips.
+const updatePips = () => {
+    const pips = Array.from(document.querySelectorAll('.pip'));
+    pips.forEach((pip, index) => {
+        pip.classList.remove('current');
+        if (index === scrollIndex) {
+            pip.classList.add('current');
+        }
+    });
+}
 
 // Initialize values and listeners.
 const init = (() => {
@@ -528,6 +538,19 @@ const init = (() => {
 
             content.style.top = `${scrollIndex * section.offsetHeight * -1}px`
         }
+
+        updatePips();
+    });
+
+    // Add listeners to navigate page with pips.
+    const pips = Array.from(document.querySelectorAll('.pip'));
+    pips.forEach((pip, index) => {
+        pip.addEventListener('click', () => {
+            scrollIndex = index;
+            content.style.top = `${scrollIndex * section.offsetHeight * -1}px`;
+            updatePips();
+        });
+
     });
 
     // Split up certain elements into individual spans.
@@ -747,6 +770,12 @@ const init = (() => {
         creditsPage.classList.remove('credits-hover');
         creditsPage.classList.remove('credits-angled');
     });
+
+    // Copy email to clipboard on click.
+    const emailButton = document.querySelector('.email-btn');
+    emailButton.addEventListener('click', () => {
+        navigator.clipboard.writeText('sebastienapril@rocketmail.com');
+    });
 })();
 
 // Setup animations for tech carousels.
@@ -805,7 +834,7 @@ const loadProject = (project, box, code) => {
     desc.innerText = project.desc;
 
     const img = box.querySelector('.selected-project-img');
-    img.style.backgroundImage = `url("site_images/${code}.gif")`;
+    img.style.backgroundImage = `url("site_images/${code}.png")`;
 
     const repoBox = box.querySelector('.selected-project-github');
     const repo = repoBox.querySelector('a');

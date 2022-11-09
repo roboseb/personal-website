@@ -23,6 +23,13 @@
     src: url('fonts/eunoia\ FREE.ttf');
 }
 
+/* @media only screen and (max-width: 1000px) {
+    .styled>.section {
+        padding: 0 3rem 0 0 !important;
+        filter: opacity(0.5);
+    }
+} */
+
 body {
     box-sizing: border-box;
     margin: 0;
@@ -84,6 +91,8 @@ body.no-scroll {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
+    position: relative;
 
 }
 
@@ -1031,7 +1040,7 @@ body.no-scroll {
 }
 
 .styled #contact h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin: 0 0 40px 0;
 }
 
@@ -1474,4 +1483,132 @@ body.no-scroll {
     font-size: 1rem;
 
     padding: 10px;
+}
+
+.email-btn {
+    cursor: pointer;
+}
+
+.styled #pip-box {
+    font-family: floral, sans-serif;
+    font-size: 2rem;
+    border-radius: 100%;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 3;
+
+    transform: translate(0, 0);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    margin: 20px 10px;
+}
+
+.styled .pip {
+    position: relative;
+    height: 1rem;
+    width: 1rem;
+
+    border-radius: 100%;
+    background-color: var(--tan);
+
+    cursor: pointer;
+
+    transform: rotate(15deg);
+
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.styled .pip-flower {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    color: var(--tan);
+}
+
+.styled .pip.current {
+    background-color: transparent;
+    height: 2rem;
+    width: 2rem;
+
+    transform: rotate(0deg);
+}
+
+.styled .floral-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    transform: translate(-50%, -50%);
+    font-family: floral, sans-serif;
+    font-size: 30rem;
+
+    color: var(--xiketic);
+
+    cursor: default;
+}
+
+.styled .floral-accent::before {
+    content: 'o';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+
+    transform: translate(-50%, -50%) scale(0.9);
+    font-family: floral, sans-serif;
+
+    color: rgba(255, 0, 0, 0.452);
+
+    transition: all 1s cubic-bezier(0,.93,.13,.97);
+}
+
+.styled .floral-accent:hover::before {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+.styled .floral-accent.accent-1 {
+    top: 100%;
+    left: 0;
+    transform: translate(-50%, -50%) scaleX(-1) rotate(-90deg);
+}
+
+.styled .floral-accent.accent-2 {
+    top: 100%;
+    left: initial;
+    right: 0;
+    transform: translate(50%, -50%) scale(0.8) scaleX(-1) rotate(-90deg);
+}
+
+.styled .floral-accent.accent-3 {
+    top: 100%;
+    left: 0;
+    transform: translate(-50%, -40%) scale(0.8) scaleX(-1) rotate(-90deg);
+}
+
+.styled .tippable {
+    position: relative;
+}
+
+.styled .tooltip {
+    color: var(--tan);
+    font-family: sans-serif;
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+
+    transform: translate(-100%, -50%);
+
+    background-color: red;
 }
