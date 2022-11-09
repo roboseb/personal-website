@@ -1654,3 +1654,26 @@ body.no-scroll {
 .styled #other-projects .tippable:hover .tooltip.tooltip-top {
     transform: translate(0%, -200%);
 }
+
+.modal {
+    background-color: red;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    transform: translate(-50%, 0%);
+    padding: 10px;
+
+    animation: modal 1s cubic-bezier(0,.79,.4,1.07);
+    transition: all 1s cubic-bezier(0,.79,.4,1.07);
+}
+
+@keyframes modal {
+    from {transform: translate(-50%, -200%);}
+    to {transform: translate(-50%, 0%);}
+}
+
+.modal.hidden {
+    transform: translate(-50%, -200%);
+}

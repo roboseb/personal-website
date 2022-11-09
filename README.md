@@ -1,5 +1,7 @@
 # Personal Website
 
+![Gif of Seb's personal site](site_images/PersonalWebsite.gif)
+
 --Devlog--
 
 October 25th, 2022
@@ -54,30 +56,29 @@ November 8th, 2022
 
     Last day? Who knows, but we'll see. Hoping I can quickly fix the text blur issue on some elements, as that's one of the most annoying things left. Then to start finishing up some items from the to-do list.
 
+Novemeber 9th, 2022
+
+    Apparently one of the guys living upstairs is planning to sue me because he thinks I'm vaping indoors, which I'm not.
+
+    Tooltips are done and look serviceable. Just realized I should have a favicon.
+
+    Am I done? I think once I've styled the README it'll be done. Only took me like 11.5 days.
+
 --To-Do--
 
 -Properly style README / add live github and gifs/photos
--add this project to all projects list (recursive)
+DONE-add this project to all projects list (recursive)
 DONE-animated pips 
 CANCEL-differnt background colors for different sections
 DONE-more floral motif
-
 DONE-credits page (Armandocanals.com for 3d transform)
--mongodb icon by Icon 54 on iconscout
--node icon icon 54 on iconscout
--socket icon by socket mafia on iconscout
--pug icon stolen from pug repo and cleaned by me
--funko pop base by josephriley on cults3d.com
--base gravity logic by Doin on stackoverflow https://stackoverflow.com/questions/15423736/how-to-get-a-gravity-effect-in-a-css-animation
--(credit for stolen button perspective hover)
-
 CANCEL-folder clicking and emptying out animation (including for rolodex)
 DONE-fix project 3d folders not snapping back
 CANCEL-folders that actually open?
 CANCEL-retrigger animations on scroll in
--replace images with gifs in the end
+DONE-replace images with gifs in the end
 DONE?????-fix tech item red bar rounding error
--add reminder text to tech logos
+CANCEL-add reminder text to tech logos
 DONE-flower cutouts on slidey buttons
 
 DONE-add setdata to rolodex cards
@@ -87,11 +88,13 @@ DONE-fix rolodex angle after scrolling bug
 DONE?????-fix blurry html/css icons (%resize issue?)
 DONE(SORTA)-email section on the contact page?
 DONE-scroll indicator for page/rolodex
--different font for p elements
--custom little pointy help box
--"haha, jk" when loading into main styled page
+DONE-different font for p elements
+DONE?(What did I mean by this)-custom little pointy help box
+DONE-"haha, jk" when loading into main styled page
 DONE-explanation in credits for what the contact pages office equipment is
 CANCEL-flat looking credits page that transitions seamlessly to 3d buttons
 DONE-faq section
--modals
--reminder text bubbles
+DONE-modals
+DONE-reminder text bubbles
+DONE-favicon
+-verify font loading in time for animation
