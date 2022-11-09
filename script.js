@@ -248,7 +248,7 @@ const projects = {
         repo: 'odin-book',
         heroku: 'https://nameless-thicket-69102.herokuapp.com/',
         title: 'Saiko Kismet',
-        desc: 'A multiplayer dice game built into a full social media site. Very much a work in progress.',
+        desc: 'A WIP multiplayer dice game built into a full social media site. Very much a work in progress.',
         tech: ['node-js.svg', 'mongodb.svg', 'socket.svg', 'pug.png'],
     },
 }
@@ -292,7 +292,9 @@ const getOffset = (index) => {
     return `${pos * 10}%`;
 }
 
+// Switch to proper styling after clicking or scrolling page.
 document.defaultView.addEventListener('click', animateContent);
+document.defaultView.addEventListener('wheel', animateContent);
 
 let scrollIndex = 0;
 
@@ -319,7 +321,7 @@ const addCard = (projectData, index) => {
     cardBack.classList.add('card-back');
     card.appendChild(cardBack);
 
-    cardBackText = document.createElement('div');
+    cardBackText = document.createElement('h3');
     cardBackText.classList.add('card-back-text');
     cardBackText.innerText = projectData.title;
     cardBack.appendChild(cardBackText);
@@ -454,8 +456,8 @@ const updateRoloPositions = (mod) => {
 
 // Animate flipping the hire coin.
 const flipCoin = (coin) => {
-    const yesTexts = ["It is certain", "It is decidedly so.", "Withouth a doubt.", "Yes - definitely.", "You may rely on it.", "As I see it, yes.", "Outlook good.", "Signs point to yes."]
-    const maybeTexts = ["Reply hazy, try again.", "Ask again later.", "Cannot predict now."]
+    const yesTexts = ["It is certain", "It is decidedly so", "Without a doubt", "Yes - definitely", "You may rely on it", "As I see it, yes", "Outlook good", "Signs point to yes"]
+    const maybeTexts = ["Reply hazy, try again", "Ask again later", "Cannot predict now"]
 
     // Animate coin jumping up.
     const wrap = coin.parentElement;

@@ -18,20 +18,28 @@
                 <h1 class='flicker' text-content='seb april'>SEB APRIL</h1>
             </div>
             <div class="item-box">
-                <h2>full stack developer</h2>
+                <h2 class='tippable'>
+                    full stack developer
+                    <div class="tooltip">technically a</div>
+                </h2>
             </div>
         </div>
 
 
         <div id='featured-projects' class='section'>
             <div class="item-box">
-                <h2>Featured Projects</h2>
+                <h2 class='tippable'>
+                    Featured Projects
+                    <div class="tooltip tooltip-top">
+                        If these work, it means Heroku has my money
+                    </div>
+                </h2>
             </div>
 
             <div class="featured-box">
                 <div class="selected-project-box">
                     <h3 class="selected-project-title">Saiko Kismet</h3>
-                    <p class="selected-project-description">A multiplayer dice game built into a full social media site.
+                    <p class="selected-project-description">A WIP multiplayer dice game built into a full social media site.
                         Capable of both online and local play, all without an account!
                     </p>
                     <div class="project-img-btn-box">
@@ -64,7 +72,8 @@
                 </div>
 
                 <div id="featured-projects-sidebar" class='transform-box'>
-                    <div class="transform-wrapper">
+                    <div class="transform-wrapper tippable">
+                        <div class="tooltip tooltip-top">Click to load a project</div>
                         <div class='project featured-project box' data-name='SaikoKismet'>
                             <div class="title-description-box">
                                 <h3 class='project-title'>Saiko Kismet</h3>
@@ -75,7 +84,8 @@
                         </div>
                     </div>
 
-                    <div class="transform-wrapper">
+                    <div class="transform-wrapper tippable">
+                        <div class="tooltip tooltip-top">Click to load a project</div>
                         <div class='project featured-project box' data-name='DIM'>
                             <div class="title-description-box">
                                 <h3 class='project-title'>Discord Instant Messenger</h3>
@@ -86,7 +96,8 @@
                         </div>
                     </div>
 
-                    <div class="transform-wrapper">
+                    <div class="transform-wrapper tippable">
+                        <div class="tooltip tooltip-top">Click to load a project</div>
                         <div class='project featured-project box' data-name='Crudworld'>
                             <div class="title-description-box">
                                 <h3 class='project-title'>Crudworld</h3>
@@ -103,7 +114,12 @@
 
         <div id='about' class='section'>
             <div class="item-box">
-                <h2>Some Context</h2>
+                <h2 class='tippable'>
+                    Some Context
+                    <div class="tooltip tooltip-top">
+                        Try hovering over the folder
+                    </div>
+                </h2>
             </div>
 
             <div class="floral-accent accent-2">O</div>
@@ -150,7 +166,12 @@
 
         <div id='other-projects' class='section'>
             <div class="item-box">
-                <h2>Other Projects</h2>
+                <h2 class='tippable'>
+                    Other Projects
+                    <div class="tooltip tooltip-top">
+                        Shoutout to my boy, The Odin Project.
+                    </div>
+                </h2>
             </div>
 
             <div class="floral-accent accent-3">O</div>
@@ -189,7 +210,10 @@
                     </div>
                 </div>
 
-                <div id='rolodex'>
+                <div id='rolodex' class='tippable'>
+                    <div class="tooltip tooltip-top">
+                        Scroll to cycle, click to load.
+                    </div>
                     <div id="rolodex-cap" data-angle='0'>
                         <div class="cap-side"></div>
                         <div class="cap-side"></div>
@@ -221,9 +245,18 @@
 
         <div id='contact' class='section'>
             <div class="item-box">
-                <h2>Contact</h2>
+                <h2 class='tippable'>
+                    Contact
+                    <div class="tooltip tooltip-top">
+                        When's the last time you lived?
+                    </div>
+                </h2>
             </div>
-            <div id="contact-box">
+            <div id="contact-box" class='tippable'>
+                <h4 id='coin-brand'>A genuine Seb Industries™ product</h4>
+                <div class="tooltip tooltip-top">
+                    Hover over the front side to rotate. Hover over the credits card to expand it. Copy email to clipboard with email button. Click the coin for advice.
+                </div>
                 <div id="link-box">
                     <div class="transform-wrapper contact-wrapper">
                         <div class="contact-link box">
@@ -291,16 +324,17 @@
                         <div id="credits-text">
                             <h4>Sources</h4>
                             <ul>
-                                <li>Armandocanals.com: Certain transform on hover effects</li>
-                                <li>mongodb icon by Icon 54 on iconscout</li>
-                                <li>node icon icon 54 on iconscout</li>
-                                <li>socket icon by socket mafia on iconscout</li>
-                                <li>pug icon stolen from pug repo and cleaned by me</li>
-                                <li>funko pop base by josephriley on cults3d.com</li>
-                                <li>-base gravity logic by Doin on stackoverflow https://stackoverflow.com/questions/15423736/how-to-get-a-gravity-effect-in-a-css-animation</li>
-                                <li>Button rocking on hover: inspired by: https://caferati.me/contact</li>
-                                <li>Eunoia font by NendesKombet on dafont.com</li>
-                                <li>Floral font by Billy Argel Fonts on dafont.com</li>
+                                <li>Certain transform on hover effects from <a href='http://armandocanals.com' target="_blank" rel="noopener noreferrer">armandocanals.com</a></li>
+                                <li>Mongodb icon by Icon 54 on <a href="https://iconscout.com/contributors/icon-54" target="_blank" rel="noopener noreferrer">iconscout</a></li>
+                                <li>Node icon by Icon 54 on <a href="https://iconscout.com/contributors/icon-54" target="_blank" rel="noopener noreferrer">iconscout</a></li>
+                                <li>Socket icon by Icon Mafia on <a href="https://iconscout.com/contributors/icon-mafia" target="_blank" rel="noopener noreferrer">iconscout</a></li>
+                                <li>Pug icon stolen from pug repo and cleaned by me <a href="https://github.com/pugjs/pug" target="_blank" rel="noopener noreferrer">pug repo</a></li>
+                                <li>Funko pop base by josephriley on <a href="http://cults3d.com" target="_blank" rel="noopener noreferrer">cults3d.com</a></li>
+                                <li>Base gravity logic by Doin on stackoverflow <a href="https://stackoverflow.com/questions/15423736/how-to-get-a-gravity-effect-in-a-css-animation" target="_blank" rel="noopener noreferrer">stack overflow</a></li>
+                                <li>Button rocking on hover: inspired by <a href="https://caferati.me/contact" target="_blank" rel="noopener noreferrer">Rafael Caferati's site</a></li>
+                                <li>Eunoia font by NendesKombet on <a href="https://www.dafont.com/eunoia.font" target="_blank" rel="noopener noreferrer">dafont.com</a></li>
+                                <li>Floral font by Billy Argel Fonts on <a href="https://www.dafont.com/floral-4.font" target="_blank" rel="noopener noreferrer">dafont.com</a></li>
+                                <li>Louis George Cafe font by Chen Yining on <a href="https://www.dafont.com/louis-george-caf.font" target="_blank" rel="noopener noreferrer">dafont.com</a></li>
                             </ul>
 
                             <h4>FAQ</h4>
@@ -330,25 +364,35 @@
         </div>
 
         <div id="pip-box">
-            <div class="pip current tippable">
+            <div class="tippable pip-wrapper">
                 <div class="tooltip">Title</div>
-                <div class="pip-flower">O</div>
+                <div class="pip current">
+                    <div class="pip-flower">O</div>
+                </div>
             </div>
-            <div class="pip tippable">
+            <div class="tippable pip-wrapper">
                 <div class="tooltip">Featured</div>
-                <div class="pip-flower">O</div>
+                <div class="pip">
+                    <div class="pip-flower">O</div>
+                </div>
             </div>
-            <div class="pip tippable">
+            <div class="tippable pip-wrapper">
                 <div class="tooltip">About</div>
-                <div class="pip-flower">O</div>
+                <div class="pip">
+                    <div class="pip-flower">O</div>
+                </div>
             </div>
-            <div class="pip tippable">
+            <div class="tippable pip-wrapper">
                 <div class="tooltip">Rolodex</div>
-                <div class="pip-flower">O</div>
+                <div class="pip">
+                    <div class="pip-flower">O</div>
+                </div>
             </div>
-            <div class="pip tippable">
+            <div class="tippable pip-wrapper">
                 <div class="tooltip">Contact</div>
-                <div class="pip-flower">O</div>
+                <div class="pip">
+                    <div class="pip-flower">O</div>
+                </div>
             </div>
         </div>
     </div>
