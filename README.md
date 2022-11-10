@@ -18,6 +18,11 @@
 - Tooltips!
 - 11-sided magic coin!
 
+## Known Issues
+
+- Firefox does not support background-image transitions, so the animation for switching between project images looks different in that browser.
+- Very slow load due to size and amount of images/3D elements.
+
 ## Devlog
 
 October 25th, 2022
@@ -79,6 +84,11 @@ Novemeber 9th, 2022
     Tooltips are done and look serviceable. Just realized I should have a favicon.
 
     Am I done? I think once I've styled the README it'll be done. Only took me like 11.5 days.
+
+
+November 10th, 2022
+
+    So everything was basically done yesterday, and I had my mom test all the site features out on her laptop, which is considerably less powerful than mine. Good for testing. She had a scrollbar in the styled mode, for some reason. This broke the full page scroll and navigation buttons. She also couldn't flip the coin at all. Apparently she's on firefox, so I install firefox and have the exact same problems she was having. Progress. Now to get firefox on my VM and see if I can fix this at all.
 
 ## To-Do
 

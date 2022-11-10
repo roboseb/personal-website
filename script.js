@@ -492,6 +492,7 @@ const updateRoloPositions = (mod) => {
 
 // Animate flipping the hire coin.
 const flipCoin = (coin) => {
+
     const yesTexts = ["It is certain", "It is decidedly so", "Without a doubt", "Yes - definitely", "You may rely on it", "As I see it, yes", "Outlook good", "Signs point to yes"]
     const maybeTexts = ["Reply hazy, try again", "Ask again later", "Cannot predict now"]
 
@@ -775,8 +776,11 @@ const init = (() => {
     });
 
     // Flip coin on click.
-    const coin = document.getElementById('coin');
-    coin.addEventListener('click', () => flipCoin(coin));
+    const coin = document.getElementById('coin-wrap');
+    coin.addEventListener('click', () => {
+        flipCoin(document.getElementById('coin'));
+    });
+    
 
     // Add hover listeners for changing angle of credits box.
     const creditsBox = document.getElementById('credits-box');

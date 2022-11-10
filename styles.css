@@ -6,8 +6,6 @@
     --darkest-tan: #a0934d;
 }
 
-
-
 @font-face {
     font-family: floral;
     src: url('fonts/FLORAL\ PERSONAL\ USE.otf');
@@ -28,6 +26,40 @@
     src: url('fonts/Louis\ George\ Cafe.ttf');
 }
 
+/* Fix credits text resolution in firefox. */
+@supports (-moz-appearance:none) {
+    .styled #contact #credits-page {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    
+        font-size: 1rem;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    
+        width: 75%;
+        background-color: var(--dark-tan);
+        color: black;
+    
+        transform-style: preserve-3d;
+        transform-origin: center;
+        transform: translate(-50%, -50%) rotateX(90deg);
+    
+        transition: all 1s cubic-bezier(.35, .04, 0, 1.1);
+    }
+    
+    .styled #contact #credits-page.credits-hover {
+        transform: translate(-50%, -50%) rotateX(90deg) translateY(15rem);
+    }
+    
+    .styled #contact #credits-page.credits-angled {
+        transform: translate(-50%, -50%) rotateX(180deg) translateY(15rem) translateZ(-50px);
+    }
+}
+
 body {
     box-sizing: border-box;
     margin: 0;
@@ -44,6 +76,7 @@ body.no-scroll::-webkit-scrollbar {
 }
 
 body.no-scroll {
+    overflow: hidden;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -629,6 +662,12 @@ body.no-scroll {
     position: relative;
 
     transition: all 0.5s;
+
+    pointer-events: none;
+}
+
+.styled #rolodex>* {
+    pointer-events: all;
 }
 
 .styled #rolodex-cap,
@@ -1439,17 +1478,17 @@ body.no-scroll {
 
     transform-style: preserve-3d;
     transform-origin: center;
-    transform: translate(-50%, -50%) rotateX(90deg) scale(2, 2) ;
+    transform: translate(-50%, -50%) rotateX(90deg) scale(2, 2);
 
     transition: all 1s cubic-bezier(.35, .04, 0, 1.1);
 }
 
 .styled #credits-page.credits-hover {
-    transform: translate(-50%, -50%) rotateX(90deg) translateY(15rem) scale(2, 2) ;
+    transform: translate(-50%, -50%) rotateX(90deg) translateY(15rem) scale(2, 2);
 }
 
 .styled #credits-page.credits-angled {
-    transform: translate(-50%, -50%) rotateX(180deg) translateY(15rem) translateZ(-50px) scale(2, 2) ;
+    transform: translate(-50%, -50%) rotateX(180deg) translateY(15rem) translateZ(-50px) scale(2, 2);
 }
 
 .styled #credits-header {
@@ -1589,7 +1628,7 @@ body.no-scroll {
 
     color: rgba(255, 0, 0, 0.452);
 
-    transition: all 1s cubic-bezier(0,.93,.13,.97);
+    transition: all 1s cubic-bezier(0, .93, .13, .97);
 }
 
 .styled .floral-accent:hover::before {
@@ -1630,7 +1669,7 @@ body.no-scroll {
 
     transform-style: preserve-3d;
     transform: translate(-150%, -50%);
-    transition: all 0.2s cubic-bezier(0,.62,.45,1.03);
+    transition: all 0.2s cubic-bezier(0, .62, .45, 1.03);
 
     filter: opacity(0);
 }
@@ -1665,13 +1704,18 @@ body.no-scroll {
     transform: translate(-50%, 0%);
     padding: 10px;
 
-    animation: modal 1s cubic-bezier(0,.79,.4,1.07);
-    transition: all 1s cubic-bezier(0,.79,.4,1.07);
+    animation: modal 1s cubic-bezier(0, .79, .4, 1.07);
+    transition: all 1s cubic-bezier(0, .79, .4, 1.07);
 }
 
 @keyframes modal {
-    from {transform: translate(-50%, -200%);}
-    to {transform: translate(-50%, 0%);}
+    from {
+        transform: translate(-50%, -200%);
+    }
+
+    to {
+        transform: translate(-50%, 0%);
+    }
 }
 
 .modal.hidden {
