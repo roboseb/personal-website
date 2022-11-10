@@ -276,8 +276,6 @@ const sendModal = (text) => {
     }, 2500);
 }
 
-let modaled = false;
-
 // Add styled class to body to style all elements.
 const animateContent = () => {
 
@@ -300,12 +298,6 @@ const animateContent = () => {
         setTimeout(() => {
             window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
             animated = true;
-
-            if (!modaled) {
-                sendModal('haha, got you');
-                modaled = true;
-            }
-            
         }, 500);
 
         initCarousels();
@@ -328,10 +320,6 @@ const getOffset = (index) => {
 
     return `${pos * 10}%`;
 }
-
-// Switch to proper styling after clicking or scrolling page.
-document.defaultView.addEventListener('click', animateContent);
-document.defaultView.addEventListener('wheel', animateContent);
 
 let scrollIndex = 0;
 
@@ -952,3 +940,5 @@ const loadProject = (project, box, code) => {
         initCarousels();
     }
 }
+
+animateContent();
