@@ -2,6 +2,8 @@
 
 ![Gif of Seb's personal site](site_images/PersonalWebsite.gif)
 
+[Live](https://roboseb.github.io/personal-website/)
+
 ## Features
 
 - A personal website for me, or more accurately a portfolio
