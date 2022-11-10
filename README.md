@@ -12,7 +12,7 @@
 - Links to repos and live versions of all sites I've ever made!
 - Floral motif and off-white accents!
 - Borrowed and modified, but credited, effects!
-- >! (If you're wondering, the cards on the featured projects page use some borrowed code for most of the perspective shift on mouse position. The buttons on the contact page also use this as part of their animation. The coin flipping animation uses a stackoverflow answer for the animation of going up and coming back down. I'm not a scientist or mathematicion, and I'm barely a web developer. Every other animation you see, including all the 3D stuff, is completely original.)
+- <details> (If you're wondering, the cards on the featured projects page use some borrowed code for most of the perspective shift on mouse position. The buttons on the contact page also use this as part of their animation. The coin flipping animation uses a stackoverflow answer for the animation of going up and coming back down. I'm not a scientist or mathematicion, and I'm barely a web developer. Every other animation you see, including all the 3D stuff, is completely original.)</details>
 - Grid displaying tech stacks I've worked with as collectible vinyl toys! Cute or cringe, you decide!
 - Authentic Cunningham box!
 - Tooltips!
