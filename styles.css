@@ -1721,3 +1721,32 @@ body.no-scroll {
 .modal.hidden {
     transform: translate(-50%, -200%);
 }
+
+.rolodex-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    height: 2rem;
+    width: 2rem;
+
+    background-color: red;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    filter: opacity(1);
+}
+
+.rolodex-btn:hover {
+    filter: opacity(0.5);
+}
+
+#rolodex-up-btn {
+    transform: translate(-125%, -200%);
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+
+#rolodex-down-btn {
+    transform: translate(-125%, 300%);
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}

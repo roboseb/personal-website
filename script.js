@@ -520,6 +520,8 @@ const updatePips = () => {
     });
 }
 
+let scrolling = false;
+
 // Initialize values and listeners.
 const init = (() => {
     // Add inline style to sections for smooth transitioning.
@@ -549,6 +551,13 @@ const init = (() => {
             e.target.parentElement.parentElement.parentElement.parentElement && e.target.parentElement.parentElement.parentElement.parentElement.id === 'rolodex') {
             return;
         }
+
+        // Prevent scrolling too quickly, to make trackpads useable.
+        if (scrolling) return;
+
+        scrolling = true;
+
+        setTimeout(() => {scrolling = false}, 250);
 
         e.preventDefault();
 
@@ -804,6 +813,13 @@ const init = (() => {
     emailButton.addEventListener('click', () => {
         navigator.clipboard.writeText('sebastienapril@rocketmail.com');
     });
+
+    // Add event listeners to buttons for scrolling through rolodex.
+    const rolodexUp = document.getElementById('rolodex-up-btn');
+    rolodexUp.addEventListener('click', () => updateRoloPositions(1));
+
+    const rolodexDown = document.getElementById('rolodex-down-btn');
+    rolodexDown.addEventListener('click', () => updateRoloPositions(-1));
 })();
 
 // Setup animations for tech carousels.
