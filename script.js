@@ -26,240 +26,240 @@ const projects = {
         tech: ['html.png', 'css.png', '', ''],
     },
 
-    // EtchASketch: {
-    //     code: 'EtchASketch',
-    //     repo: 'etch-a-sketch',
-    //     live: 'etch-a-sketch',
-    //     title: 'Etch-a-Sketch',
-    //     desc: "This is essentially a grid-based drawing tool. Your two options are to reset the grid, or to generate a new grid with your choice of dimensions.",
-    //     tech: ['html.png', 'css.png', 'js.png', ''],
-    // },
+    EtchASketch: {
+        code: 'EtchASketch',
+        repo: 'etch-a-sketch',
+        live: 'etch-a-sketch',
+        title: 'Etch-a-Sketch',
+        desc: "This is essentially a grid-based drawing tool. Your two options are to reset the grid, or to generate a new grid with your choice of dimensions.",
+        tech: ['html.png', 'css.png', 'js.png', ''],
+    },
 
-    // RockPaperScissors: {
-    //     code: 'RockPaperScissors',
-    //     repo: 'rock-paper-scissors',
-    //     live: 'rock-paper-scissors',
-    //     title: 'Rock Paper Scissors',
-    //     desc: "Rock paper scissors. You play as an elf who is afraid of losing. Watch her react as you either beat or lose to the computer opponent.",
-    //     tech: ['html.png', 'css.png', 'js.png', ''],
-    // },
+    RockPaperScissors: {
+        code: 'RockPaperScissors',
+        repo: 'rock-paper-scissors',
+        live: 'rock-paper-scissors',
+        title: 'Rock Paper Scissors',
+        desc: "Rock paper scissors. You play as an elf who is afraid of losing. Watch her react as you either beat or lose to the computer opponent.",
+        tech: ['html.png', 'css.png', 'js.png', ''],
+    },
 
-    // Calculator: {
-    //     code: 'Calculator',
-    //     repo: 'calculator',
-    //     live: 'calculator',
-    //     title: 'Calculator',
-    //     desc: "A calculator. Similar to rock paper scissors, a little pumpkin guy will give reactions to your inputs, including some secret ones.",
-    //     tech: ['html.png', 'css.png', 'js.png', ''],
-    // },
+    Calculator: {
+        code: 'Calculator',
+        repo: 'calculator',
+        live: 'calculator',
+        title: 'Calculator',
+        desc: "A calculator. Similar to rock paper scissors, a little pumpkin guy will give reactions to your inputs, including some secret ones.",
+        tech: ['html.png', 'css.png', 'js.png', ''],
+    },
 
-    // SignUpForm: {
-    //     code: 'SignUpForm',
-    //     repo: 'sign-up-form',
-    //     live: 'sign-up-form',
-    //     title: 'Sign-up Form',
-    //     desc: "A straightforward sign-up form that signs you up for nothing. Click the little head and see what happens.",
-    //     tech: ['html.png', 'css.png', 'js.png', ''],
-    // },
+    SignUpForm: {
+        code: 'SignUpForm',
+        repo: 'sign-up-form',
+        live: 'sign-up-form',
+        title: 'Sign-up Form',
+        desc: "A straightforward sign-up form that signs you up for nothing. Click the little head and see what happens.",
+        tech: ['html.png', 'css.png', 'js.png', ''],
+    },
 
-    // AdminDashboard: {
-    //     code: 'AdminDashboard',
-    //     repo: 'admin-dashboard',
-    //     live: 'admin-dashboard',
-    //     title: 'Waifunet',
-    //     desc: "A static mock up for a fake social media site focused on anime/manga waifus. Click on kurippi, your virtual assistant, for her tip of the day.",
-    //     tech: ['html.png', 'css.png', 'js.png', ''],
-    // },
+    AdminDashboard: {
+        code: 'AdminDashboard',
+        repo: 'admin-dashboard',
+        live: 'admin-dashboard',
+        title: 'Waifunet',
+        desc: "A static mock up for a fake social media site focused on anime/manga waifus. Click on kurippi, your virtual assistant, for her tip of the day.",
+        tech: ['html.png', 'css.png', 'js.png', ''],
+    },
 
-    // TicTacToe: {
-    //     code: 'TicTacToe',
-    //     repo: 'tic-tac-toe',
-    //     live: 'tic-tac-toe',
-    //     title: 'Tic-Tac-Toe',
-    //     desc: "Play tic-tac-toe against an android who has been cursed with the inability to lose for all eternity.",
-    //     tech: ['html.png', 'css.png', 'js.png', ''],
-    // },
+    TicTacToe: {
+        code: 'TicTacToe',
+        repo: 'tic-tac-toe',
+        live: 'tic-tac-toe',
+        title: 'Tic-Tac-Toe',
+        desc: "Play tic-tac-toe against an android who has been cursed with the inability to lose for all eternity.",
+        tech: ['html.png', 'css.png', 'js.png', ''],
+    },
 
-    // Library: {
-    //     code: 'Library',
-    //     repo: 'library',
-    //     live: 'library',
-    //     title: 'Library',
-    //     desc: "An app that could theoretically track books which you've read. Includes some retro styling, and some randomly chosen cover art.",
-    //     tech: ['html.png', 'css.png', 'js.png', ''],
-    // },
+    Library: {
+        code: 'Library',
+        repo: 'library',
+        live: 'library',
+        title: 'Library',
+        desc: "An app that could theoretically track books which you've read. Includes some retro styling, and some randomly chosen cover art.",
+        tech: ['html.png', 'css.png', 'js.png', ''],
+    },
 
-    // RestaurantPage: {
-    //     code: 'RestaurantPage',
-    //     repo: 'restaurant-page',
-    //     live: 'restaurant-page',
-    //     title: 'Restaurant Page',
-    //     desc: "A fake page for a real restaurant. The home page includes a unique dynamic image grid, which expands and shrinks images as you hover around it.",
-    //     tech: ['css.png', 'js.png', 'npm.png', 'webpack.png'],
-    // },
+    RestaurantPage: {
+        code: 'RestaurantPage',
+        repo: 'restaurant-page',
+        live: 'restaurant-page',
+        title: 'Restaurant Page',
+        desc: "A fake page for a real restaurant. The home page includes a unique dynamic image grid, which expands and shrinks images as you hover around it.",
+        tech: ['css.png', 'js.png', 'npm.png', 'webpack.png'],
+    },
 
-    // ToDoList: {
-    //     code: 'ToDoList',
-    //     repo: 'to-do-list',
-    //     live: 'to-do-list',
-    //     title: 'To-Do List',
-    //     desc: "A unique spin on the to-do list. Or it was, but after some research it may be slightly less clever than I thought.",
-    //     tech: ['css.png', 'js.png', 'npm.png', 'webpack.png'],
-    // },
+    ToDoList: {
+        code: 'ToDoList',
+        repo: 'to-do-list',
+        live: 'to-do-list',
+        title: 'To-Do List',
+        desc: "A unique spin on the to-do list. Or it was, but after some research it may be slightly less clever than I thought.",
+        tech: ['css.png', 'js.png', 'npm.png', 'webpack.png'],
+    },
 
-    // MobileFirst: {
-    //     code: 'MobileFirst',
-    //     repo: 'mobile-first',
-    //     live: 'mobile-first',
-    //     title: 'Mocchan and Jake',
-    //     desc: "A simple app designed initially with mobile in mind. Learn the heartwarming tale of Mocchan, a precocious little girl, and Jake, her baseball bat.",
-    //     tech: ['css.png', 'js.png', 'npm.png', 'webpack.png'],
-    // },
+    MobileFirst: {
+        code: 'MobileFirst',
+        repo: 'mobile-first',
+        live: 'mobile-first',
+        title: 'Mocchan and Jake',
+        desc: "A simple app designed initially with mobile in mind. Learn the heartwarming tale of Mocchan, a precocious little girl, and Jake, her baseball bat.",
+        tech: ['css.png', 'js.png', 'npm.png', 'webpack.png'],
+    },
 
-    // WeatherApp: {
-    //     code: 'WeatherApp',
-    //     repo: 'weather-app',
-    //     live: 'weather-app',
-    //     title: 'Weather App',
-    //     desc: "An API-connected weather app. Animates current time and weather with our old friends, the sun and the moon.",
-    //     tech: ['css.png', 'js.png', 'npm.png', 'webpack.png'],
-    // },
+    WeatherApp: {
+        code: 'WeatherApp',
+        repo: 'weather-app',
+        live: 'weather-app',
+        title: 'Weather App',
+        desc: "An API-connected weather app. Animates current time and weather with our old friends, the sun and the moon.",
+        tech: ['css.png', 'js.png', 'npm.png', 'webpack.png'],
+    },
 
-    // JSValidate: {
-    //     code: 'JSValidate',
-    //     repo: 'js-validate',
-    //     live: 'js-validate',
-    //     title: 'JS Validate',
-    //     desc: "A simple validation form that uses Javascript for custom validation parameters. Includes fun background animations!",
-    //     tech: ['html.png', 'css.png', 'js.png', ''],
-    // },
+    JSValidate: {
+        code: 'JSValidate',
+        repo: 'js-validate',
+        live: 'js-validate',
+        title: 'JS Validate',
+        desc: "A simple validation form that uses Javascript for custom validation parameters. Includes fun background animations!",
+        tech: ['html.png', 'css.png', 'js.png', ''],
+    },
 
-    // HearthstoneAPI: {
-    //     code: 'HearthstoneAPI',
-    //     repo: 'hearthstone-api',
-    //     live: 'hearthstone-api',
-    //     title: 'Hearthstone Memory',
-    //     desc: "A memory game that used to be connected to an API, until the API briefly went down. It now uses a static set of cards.",
-    //     tech: ['html.png', 'css.png', 'js.png', ''],
-    // },
+    HearthstoneAPI: {
+        code: 'HearthstoneAPI',
+        repo: 'hearthstone-api',
+        live: 'hearthstone-api',
+        title: 'Hearthstone Memory',
+        desc: "A memory game that used to be connected to an API, until the API briefly went down. It now uses a static set of cards.",
+        tech: ['html.png', 'css.png', 'js.png', ''],
+    },
 
-    // Battleship: {
-    //     code: 'Battleship',
-    //     repo: 'battleship',
-    //     live: 'battleship',
-    //     title: 'Battleship',
-    //     desc: "A game of battleship where you are accompanied by your doting shipgirls. Don't fail them, for their love may begin to dwindle.",
-    //     tech: ['css.png', 'js.png', 'npm.png', 'webpack.png'],
-    // },
+    Battleship: {
+        code: 'Battleship',
+        repo: 'battleship',
+        live: 'battleship',
+        title: 'Battleship',
+        desc: "A game of battleship where you are accompanied by your doting shipgirls. Don't fail them, for their love may begin to dwindle.",
+        tech: ['css.png', 'js.png', 'npm.png', 'webpack.png'],
+    },
 
-    // CVProject: {
-    //     code: 'CVProject',
-    //     repo: 'cv-project',
-    //     live: 'cv-project',
-    //     title: 'CVGenDUO',
-    //     desc: "A resume building app. Enter some basic info to create a simple resume. Or find out what happens when you click 'click me'",
-    //     tech: ['css.png', 'js.png', 'npm.png', 'webpack.png'],
-    // },
+    CVProject: {
+        code: 'CVProject',
+        repo: 'cv-project',
+        live: 'cv-project',
+        title: 'CVGenDUO',
+        desc: "A resume building app. Enter some basic info to create a simple resume. Or find out what happens when you click 'click me'",
+        tech: ['css.png', 'js.png', 'npm.png', 'webpack.png'],
+    },
 
-    // MemoryCard: {
-    //     code: 'MemoryCard',
-    //     repo: 'memory-card-real',
-    //     live: 'memory-card-real',
-    //     title: 'Memory Card',
-    //     desc: "An API-based game of memory. Click each card in a set of 9 once, but the cards change place between each click.",
-    //     tech: ['css.png', 'js.png', 'npm.png', 'react.svg'],
+    MemoryCard: {
+        code: 'MemoryCard',
+        repo: 'memory-card-real',
+        live: 'memory-card-real',
+        title: 'Memory Card',
+        desc: "An API-based game of memory. Click each card in a set of 9 once, but the cards change place between each click.",
+        tech: ['css.png', 'js.png', 'npm.png', 'react.svg'],
 
-    // },
+    },
 
-    // ShoppingCart: {
-    //     code: 'ShoppingCart',
-    //     repo: 'shopping-cart',
-    //     live: 'shopping-cart',
-    //     title: 'laythere.ca',
-    //     desc: "A mock shopping site that uses images from an API to generate item listings that identical to wayfair's.",
-    //     tech: ['css.png', 'js.png', 'npm.png', 'react.svg'],
-    // },
+    ShoppingCart: {
+        code: 'ShoppingCart',
+        repo: 'shopping-cart',
+        live: 'shopping-cart',
+        title: 'laythere.ca',
+        desc: "A mock shopping site that uses images from an API to generate item listings that identical to wayfair's.",
+        tech: ['css.png', 'js.png', 'npm.png', 'react.svg'],
+    },
 
-    // DragonQuest: {
-    //     code: 'DragonQuest',
-    //     repo: 'dragon-quest',
-    //     live: 'dragon-quest',
-    //     title: 'Dragon Quest',
-    //     desc: "Similar to Where's Waldo, but stolen from a different book. Connects to Firebase for tracking high scores.",
-    //     tech: ['js.png', 'npm.png', 'react.svg', 'firebase.png'],
-    // },
+    DragonQuest: {
+        code: 'DragonQuest',
+        repo: 'dragon-quest',
+        live: 'dragon-quest',
+        title: 'Dragon Quest',
+        desc: "Similar to Where's Waldo, but stolen from a different book. Connects to Firebase for tracking high scores.",
+        tech: ['js.png', 'npm.png', 'react.svg', 'firebase.png'],
+    },
 
-    // NubeClicker: {
-    //     code: 'NubeClicker',
-    //     repo: 'js-final-project',
-    //     live: 'js-final-project',
-    //     title: 'Nube',
-    //     desc: "A mobile-focused app in which you buy and sell Bored Apes. Sign in with Google, and have all your game data saved with Firebase.",
-    //     tech: ['js.png', 'npm.png', 'react.svg', 'firebase.png'],
-    // },
+    NubeClicker: {
+        code: 'NubeClicker',
+        repo: 'js-final-project',
+        live: 'js-final-project',
+        title: 'Nube',
+        desc: "A mobile-focused app in which you buy and sell Bored Apes. Sign in with Google, and have all your game data saved with Firebase.",
+        tech: ['js.png', 'npm.png', 'react.svg', 'firebase.png'],
+    },
 
-    // Portfolio: {
-    //     code: 'Portfolio',
-    //     repo: 'portfolio',
-    //     live: 'portfolio',
-    //     title: 'Portfolio',
-    //     desc: 'My last portfolio project. Join Miko as you explore the immersive and relaxing island of my past work.',
-    //     tech: ['css.png', 'js.png', 'npm.png', 'react.svg'],
-    // },
+    Portfolio: {
+        code: 'Portfolio',
+        repo: 'portfolio',
+        live: 'portfolio',
+        title: 'Portfolio',
+        desc: 'My last portfolio project. Join Miko as you explore the immersive and relaxing island of my past work.',
+        tech: ['css.png', 'js.png', 'npm.png', 'react.svg'],
+    },
 
-    // MiniMessagebricks: {
-    //     code: 'MiniMessagebricks',
-    //     repo: 'mini-message-board',
-    //     heroku: 'https://secret-reef-82420.herokuapp.com',
-    //     title: 'Mini Messagebricks',
-    //     desc: 'A simple Node app for sharing messages. Click on bricks to have them slide around!',
-    //     tech: ['npm.png', 'express.png', 'node-js.svg', 'pug.png'],
-    // },
+    MiniMessagebricks: {
+        code: 'MiniMessagebricks',
+        repo: 'mini-message-board',
+        heroku: 'https://secret-reef-82420.herokuapp.com',
+        title: 'Mini Messagebricks',
+        desc: 'A simple Node app for sharing messages. Click on bricks to have them slide around!',
+        tech: ['npm.png', 'express.png', 'node-js.svg', 'pug.png'],
+    },
 
-    // Crudworld: {
-    //     code: 'Crudworld',
-    //     repo: 'inventory-application',
-    //     heroku: 'https://crudworld.herokuapp.com/catalog/world/63190230ffaf580f3a523e3c',
-    //     title: 'Crudworld',
-    //     desc: 'A simulated world populated by cruddies, and created by users.',
-    //     tech: ['node-js.svg', 'mongodb.svg', 'mongoose.png', 'pug.png'],
-    // },
+    Crudworld: {
+        code: 'Crudworld',
+        repo: 'inventory-application',
+        heroku: 'https://crudworld.herokuapp.com/catalog/world/63190230ffaf580f3a523e3c',
+        title: 'Crudworld',
+        desc: 'A simulated world populated by cruddies, and created by users.',
+        tech: ['node-js.svg', 'mongodb.svg', 'mongoose.png', 'pug.png'],
+    },
 
-    // DIM: {
-    //     code: 'DIM',
-    //     repo: 'members-only',
-    //     heroku: 'https://guarded-fjord-47833.herokuapp.com/',
-    //     title: 'Discord Instant Messenger',
-    //     desc: 'A corrupted version of discord, with working accounts and messaging.',
-    //     tech: ['node-js.svg', 'mongodb.svg', 'passport.svg', 'pug.png',],
-    // },
+    DIM: {
+        code: 'DIM',
+        repo: 'members-only',
+        heroku: 'https://guarded-fjord-47833.herokuapp.com/',
+        title: 'Discord Instant Messenger',
+        desc: 'A corrupted version of discord, with working accounts and messaging.',
+        tech: ['node-js.svg', 'mongodb.svg', 'passport.svg', 'pug.png',],
+    },
 
-    // BlogApi: {
-    //     code: 'BlogApi',
-    //     repo: 'blog-api-client',
-    //     live: 'blog-api-client',
-    //     title: 'Blog API',
-    //     desc: 'A Blog API client. Built with react, and connected to a Node based API made by me.',
-    //     tech: ['react.svg', 'mongodb.svg', 'mongoose.png', 'pug.png'],
-    // },
+    BlogApi: {
+        code: 'BlogApi',
+        repo: 'blog-api-client',
+        live: 'blog-api-client',
+        title: 'Blog API',
+        desc: 'A Blog API client. Built with react, and connected to a Node based API made by me.',
+        tech: ['react.svg', 'mongodb.svg', 'mongoose.png', 'pug.png'],
+    },
 
-    // SaikoKismet: {
-    //     code: 'SaikoKismet',
-    //     repo: 'odin-book',
-    //     heroku: 'https://nameless-thicket-69102.herokuapp.com/',
-    //     title: 'Saiko Kismet',
-    //     desc: 'A WIP multiplayer dice game built into a full social media site. Very much a work in progress.',
-    //     tech: ['node-js.svg', 'mongodb.svg', 'socket.svg', 'pug.png'],
-    // },
+    SaikoKismet: {
+        code: 'SaikoKismet',
+        repo: 'odin-book',
+        heroku: 'https://nameless-thicket-69102.herokuapp.com/',
+        title: 'Saiko Kismet',
+        desc: 'A WIP multiplayer dice game built into a full social media site. Very much a work in progress.',
+        tech: ['node-js.svg', 'mongodb.svg', 'socket.svg', 'pug.png'],
+    },
 
-    // PersonalWebsite: {
-    //     code: 'PersonalWebsite',
-    //     repo: 'personal-website',
-    //     live: 'personal-website',
-    //     title: 'Personal Website',
-    //     desc: "The site you're on right now. Spooky, ain't it?",
-    //     tech: ['html.png', 'css.png', 'js.png', ''],
-    // },
+    PersonalWebsite: {
+        code: 'PersonalWebsite',
+        repo: 'personal-website',
+        live: 'personal-website',
+        title: 'Personal Website',
+        desc: "The site you're on right now. Spooky, ain't it?",
+        tech: ['html.png', 'css.png', 'js.png', ''],
+    },
 }
 
 // Display a modal on screen with the passed message.
@@ -282,27 +282,14 @@ const animateContent = () => {
     const content = document.getElementById('content');
     const body = document.querySelector('body');
 
-    if (animated) {
-        // content.classList.remove('styled');
-        // animated = false;
-
-        // body.classList.remove('no-scroll');
-        // window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-    } else {
+    if (!animated) {
         content.classList.add('styled');
-
 
         body.classList.add('no-scroll');
 
         animated = true;
 
-        // Wait to reset window, in case scrolling transition was too fast.
-        // setTimeout(() => {
-        //     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-        // }, 500);
-
         initCarousels();
-
 
         // Initialize position for cards. 
         setRoloPositions(1);

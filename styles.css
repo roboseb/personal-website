@@ -12,11 +12,6 @@
 }
 
 @font-face {
-    font-family: palm;
-    src: url('fonts/Palm\ Beach.ttf');
-}
-
-@font-face {
     font-family: eunoia;
     src: url('fonts/eunoia\ FREE.ttf');
 }
@@ -88,7 +83,6 @@ body.no-scroll {
 
     overflow-y: scroll;
 
-    /* height: 100%; */
     width: 100%;
     background-color: white;
 
@@ -148,22 +142,6 @@ body.no-scroll {
 .styled .item-box {
     width: 100% !important;
 }
-
-/* #main-title {
-    display: none;
-}
-
-#other-projects {
-    display: none;
-}
-
-#featured-projects {
-    display: none;
-}
-
-#about {
-    display: none;
-} */
 
 #main-title h1 {
     background-clip: text;
@@ -787,8 +765,6 @@ body.no-scroll {
 .card>*:not(.project) {
     pointer-events: none;
 }
-
-.styled #about {}
 
 .styled #about h2 {
     margin: 0;
@@ -1522,24 +1498,6 @@ body.no-scroll {
 .styled #credits-text ul {
     padding: 0 0 0 10px;
     width: 95%;
-}
-
-.styled #credits-page>#credits-text .contact-link.box-2d {
-    height: 2rem;
-    transform: rotateX(180deg) translateZ(-0px);
-
-    transform-style: flat;
-}
-
-.styled #credits-page>#credits-text .contact-link.box-2d:hover {
-    transform-style: preserve-3d;
-}
-
-.styled #credits-page>#credits-text .contact-link.box-2d>div:not(.btn-face) {
-    transform: scaleY(-1);
-    font-size: 1rem;
-
-    padding: 10px;
 }
 
 .email-btn {
