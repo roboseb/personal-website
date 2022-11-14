@@ -126,3 +126,6 @@ DONE-modals
 DONE-reminder text bubbles
 DONE-favicon
 -verify font loading in time for animation
+-dry code
+DONE-fix contact page on mobile
+DONE-fix overly wide page on mobile
