@@ -92,6 +92,12 @@ November 10th, 2022
 
     So everything was basically done yesterday, and I had my mom test all the site features out on her laptop, which is considerably less powerful than mine. Good for testing. She had a scrollbar in the styled mode, for some reason. This broke the full page scroll and navigation buttons. She also couldn't flip the coin at all. Apparently she's on firefox, so I install firefox and have the exact same problems she was having. Progress. Now to get firefox on my VM and see if I can fix this at all.
 
+October 4th, 2023
+
+    Lol, it's been a while. Looked for programming work for a while and then ran out of money and needed a job faster. Became a work from home roadside assistant for a few months, then quit that at the end of august. Spent the past month or so sending out web dev job applications and remaking my resume. Now to clean up the 'ol 'folio.
+
+
+
 ## To-Do
 
 -Properly style README / add live github and gifs/photos
@@ -129,3 +135,5 @@ DONE-favicon
 -dry code
 DONE-fix contact page on mobile
 DONE-fix overly wide page on mobile
+-Add link to pdf for resume/standalone resume page, mention figma?
+-Add message about warning for discord site.

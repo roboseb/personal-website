@@ -1708,6 +1708,46 @@ body.no-scroll {
     clip-path: polygon(100% 0, 0 0, 100% 100%);
 }
 
+.sticker {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 200px;
+    width: 200px;
+
+    background-color: var(--darkest-tan);
+
+    clip-path: polygon(1% 0%, 0% 99%, 17% 57%, 43% 97%, 39% 56%, 87% 80%, 54% 36%, 100% 41%, 63% 16%, 100% 0%);
+    animation: sticker 1s 0s infinite;
+    animation-timing-function: cubic-bezier(.13,.78,.25,1.27);
+}
+
+@keyframes sticker {
+    0% {
+        clip-path: polygon(1% 0%, 0% 99%, 17% 57%, 43% 97%, 39% 56%, 87% 80%, 54% 36%, 100% 41%, 63% 16%, 100% 0%);
+    }
+
+    50% {
+        clip-path: polygon(1% 0%, 0 80%, 17% 57%, 35% 81%, 39% 56%, 66% 63%, 54% 36%, 82% 32%, 63% 16%, 79% 0);
+    }
+
+    100% {
+        clip-path: polygon(1% 0%, 0% 99%, 17% 57%, 43% 97%, 39% 56%, 87% 80%, 54% 36%, 100% 41%, 63% 16%, 100% 0%);
+    }
+}
+
+.sticker-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+
+    padding: 15px;
+
+    color: white;
+}
+
 @media only screen and (max-width: 800px) {
     .styled #main-title h1 {
         font-size: 4rem;
