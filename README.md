@@ -96,6 +96,10 @@ October 4th, 2023
 
     Lol, it's been a while. Looked for programming work for a while and then ran out of money and needed a job faster. Became a work from home roadside assistant for a few months, then quit that at the end of august. Spent the past month or so sending out web dev job applications and remaking my resume. Now to clean up the 'ol 'folio.
 
+October 7th, 2023
+
+    Forgot to add a journal entry for the 5th when I finished up the link animation to my resume. That animation is all done, and I like it a lot. For some reason tan colours either look different on this monitor or different in the linux virtualbox, not sure which. Site looks fine on other devices. Link connects to resume locally without issue. Just realized I probably don't want my location/phone number on a resume that is so publicly available. Will update that in figma then add the discord disclaimer and make sure this all works in the github pages version.
+
 
 
 ## To-Do
@@ -137,3 +141,5 @@ DONE-fix contact page on mobile
 DONE-fix overly wide page on mobile
 -Add link to pdf for resume/standalone resume page, mention figma?
 -Add message about warning for discord site.
+-uncomment extra projects
+-uncomment extra sections

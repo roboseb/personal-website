@@ -1713,39 +1713,101 @@ body.no-scroll {
     top: 0;
     left: 0;
 
-    height: 200px;
-    width: 200px;
+    margin: 20px;
+    padding: 5px;
+    border-radius: 10px;
 
-    background-color: var(--darkest-tan);
+    background-color: var(--xiketic);
+    color: var(--xiketic);
 
-    clip-path: polygon(1% 0%, 0% 99%, 17% 57%, 43% 97%, 39% 56%, 87% 80%, 54% 36%, 100% 41%, 63% 16%, 100% 0%);
-    animation: sticker 1s 0s infinite;
-    animation-timing-function: cubic-bezier(.13,.78,.25,1.27);
+    cursor: pointer;
+    text-decoration: none;
 }
 
-@keyframes sticker {
-    0% {
-        clip-path: polygon(1% 0%, 0% 99%, 17% 57%, 43% 97%, 39% 56%, 87% 80%, 54% 36%, 100% 41%, 63% 16%, 100% 0%);
-    }
-
-    50% {
-        clip-path: polygon(1% 0%, 0 80%, 17% 57%, 35% 81%, 39% 56%, 66% 63%, 54% 36%, 82% 32%, 63% 16%, 79% 0);
-    }
-
-    100% {
-        clip-path: polygon(1% 0%, 0% 99%, 17% 57%, 43% 97%, 39% 56%, 87% 80%, 54% 36%, 100% 41%, 63% 16%, 100% 0%);
-    }
+.sticker, .sticker * {
+    transition: all 0.3s cubic-bezier(.22,.81,.67, 1.8);
 }
 
-.sticker-text {
+.sticker:hover {
+    background-color: red;
+    color: var(--tan);
+    
+}
+
+.sticker:hover>.sticker-text {
+    background-color: var(--xiketic);
+    
+    border-radius: 10px;
+
+    padding: 10px 20px 10px 10px;
+}
+
+.sticker>.sticker-text {
+    padding: 10px 10px 10px 10px;
+    background-color: var(--tan);
+    border-radius: 0px;
+}
+
+.sticker-corner-box {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    height: 35px;
+    width: 35px;
+
+    transform: translate(50%, -25%);
+}
+
+.sticker-arrow {
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%;
 
-    padding: 15px;
+    height: 90%;
+    width: 100%;
 
+    transition-delay: 0.1s;
+    background-color: transparent;
+    clip-path: polygon(28% 46%, 0 45%, 0 25%, 50% 25%, 51% 56%, 50% 100%, 26% 100%);
+    
+}
+
+.sticker:hover .sticker-arrow {
+    background-color: red;
+    clip-path: polygon(0 73%, 35% 37%, 0 0, 100% 0, 100% 100%, 61% 63%, 26% 100%);
+}
+
+.sticker:hover .sticker-corner-box {
+    background-color: var(--xiketic);
+}
+
+#discord-warning {
+    position: absolute;
+    z-index: 1;
+    top: -2px;
+    right: 0;
+
+    height: calc(100% + 4px);
+    width: 100%;
+
+    overflow: hidden;
+    pointer-events: none;
+}
+
+#discord-warning-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    background-color: red;
     color: white;
+    padding: 10px 50px;
+    filter: drop-shadow(4px 2px 2px rgba(0, 0, 0, 0.445));
+
+    white-space: nowrap;
+    transform: translate(-20%, -40%) rotate(35deg);
 }
 
 @media only screen and (max-width: 800px) {
