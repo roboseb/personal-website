@@ -260,6 +260,15 @@ const projects = {
         desc: "The site you're on right now. Spooky, ain't it?",
         tech: ['html.png', 'css.png', 'js.png', ''],
     },
+
+    Pokemetric: {
+        code: 'Pokemetric',
+        repo: 'pokemetrics',
+        live: 'pokemetrics',
+        title: 'Pokemetric!',
+        desc: "Find out exactly how many pikachus tall you are!",
+        tech: ['html.png', 'css.png', 'js.png', ''],
+    },
 }
 
 // Display a modal on screen with the passed message.

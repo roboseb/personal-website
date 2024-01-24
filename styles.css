@@ -1724,6 +1724,11 @@ body.no-scroll {
     text-decoration: none;
 }
 
+.sticker#pokemetric-sticker {
+    top: 60px;
+    left: 0;
+}
+
 .sticker, .sticker * {
     transition: all 0.3s cubic-bezier(.22,.81,.67, 1.8);
 }
